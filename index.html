@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>فينطاس | بوابة الأخبار والتداول</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --gold:#ff8c2a; --gold-light:#ffb060;
+  --dark:#0b0f1e; --dark2:#0e1426; --dark3:#131a30;
+  --text:#e8eaf0; --text-muted:#6a7a99;
+  --green:#00c896; --red:#ff4757;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Tajawal',sans-serif;background:var(--dark);color:var(--text);min-height:100vh;overflow-x:hidden;}
+body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
+  background:radial-gradient(ellipse 80% 50% at 20% 10%,rgba(255,140,42,.06) 0%,transparent 60%),
+             radial-gradient(ellipse 60% 40% at 80% 80%,rgba(20,50,120,.15) 0%,transparent 60%);}
+
+/* AD */
+.ad-banner{background:linear-gradient(135deg,#0d1117,#161b26);border-bottom:1px solid rgba(255,140,42,.2);padding:10px 20px;text-align:center;position:relative;z-index:10;}
+.ad-banner-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;}
+.ad-label{font-size:10px;color:var(--text-muted);background:rgba(255,255,255,.05);padding:2px 8px;border-radius:3px;letter-spacing:1px;}
+.ad-slot{background:linear-gradient(90deg,rgba(255,140,42,.08),rgba(30,60,140,.08));border:1px dashed rgba(255,140,42,.3);border-radius:6px;padding:10px 40px;font-size:13px;color:var(--gold);cursor:pointer;transition:all .3s;min-width:728px;max-width:100%;}
+.ad-slot:hover{border-color:var(--gold);}
+
+/* HEADER */
+header{position:relative;z-index:10;padding:0 24px;border-bottom:1px solid rgba(255,140,42,.15);background:rgba(10,12,16,.95);backdrop-filter:blur(20px);}
+.header-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:72px;}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;}
+.logo-icon{width:42px;height:42px;background:linear-gradient(135deg,var(--gold),#c05800);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:22px;box-shadow:0 4px 20px rgba(255,140,42,.3);}
+.logo-name{font-size:26px;font-weight:900;background:linear-gradient(135deg,var(--gold-light),var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;line-height:1;}
+.logo-sub{font-size:11px;color:var(--text-muted);font-weight:300;letter-spacing:2px;}
+.header-live{display:flex;align-items:center;gap:8px;}
+.live-dot{width:8px;height:8px;background:var(--red);border-radius:50%;animation:pulse 1.5s infinite;}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.8)}}
+.live-text{font-size:12px;color:var(--red);font-weight:700;letter-spacing:2px;}
+
+/* TICKER */
+.ticker-bar{background:var(--dark2);border-bottom:1px solid rgba(255,255,255,.05);padding:8px 0;overflow:hidden;position:relative;z-index:9;}
+.ticker-inner{display:flex;gap:48px;animation:ticker 30s linear infinite;white-space:nowrap;width:max-content;}
+@keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.ticker-item{display:inline-flex;align-items:center;gap:8px;font-size:12px;}
+.tn{color:var(--text-muted)}.tv2{color:var(--text);font-weight:600}.tu{color:var(--green)}.td2{color:var(--red)}
+
+/* HERO */
+.hero{position:relative;z-index:1;text-align:center;padding:52px 24px 36px;}
+.hero h1{font-size:clamp(28px,5vw,48px);font-weight:900;line-height:1.2;margin-bottom:12px;}
+.hero h1 span{background:linear-gradient(135deg,var(--gold-light),var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+.hero p{color:var(--text-muted);font-size:15px;max-width:500px;margin:0 auto;}
+
+/* TABS */
+.tabs{display:flex;justify-content:center;gap:8px;padding:0 24px 32px;position:relative;z-index:1;flex-wrap:wrap;}
+.tab-btn{padding:10px 24px;border-radius:50px;border:1px solid rgba(255,255,255,.08);background:var(--dark3);color:var(--text-muted);font-family:'Tajawal',sans-serif;font-size:14px;font-weight:500;cursor:pointer;transition:all .25s;}
+.tab-btn:hover{border-color:rgba(255,140,42,.4);color:var(--gold);}
+.tab-btn.active{background:linear-gradient(135deg,rgba(255,140,42,.2),rgba(255,140,42,.05));border-color:var(--gold);color:var(--gold);font-weight:700;}
+.tab-search{border-color:rgba(0,200,150,.3)!important;color:var(--green)!important;}
+.tab-search.active{background:linear-gradient(135deg,rgba(0,200,150,.2),rgba(0,200,150,.05))!important;border-color:var(--green)!important;color:var(--green)!important;}
+
+/* MAIN */
+.main{max-width:1200px;margin:0 auto;padding:0 24px 60px;position:relative;z-index:1;}
+.section-title{font-size:13px;font-weight:700;color:var(--text-muted);letter-spacing:3px;text-transform:uppercase;margin-bottom:20px;display:flex;align-items:center;gap:12px;}
+.section-title::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,rgba(255,140,42,.2),transparent);}
+.section{display:none;}.section.active{display:block;}
+
+/* CHANNELS */
+.channels-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px;margin-bottom:40px;}
+.channel-card{background:var(--dark3);border:1px solid rgba(255,255,255,.06);border-radius:14px;padding:20px 16px;cursor:pointer;transition:all .3s;text-decoration:none;display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center;position:relative;overflow:hidden;opacity:0;transform:translateY(20px);animation:fadeUp .5s forwards;}
+@keyframes fadeUp{to{opacity:1;transform:translateY(0)}}
+.channel-card:nth-child(1){animation-delay:.05s}.channel-card:nth-child(2){animation-delay:.1s}.channel-card:nth-child(3){animation-delay:.15s}.channel-card:nth-child(4){animation-delay:.2s}.channel-card:nth-child(5){animation-delay:.25s}.channel-card:nth-child(6){animation-delay:.3s}
+.channel-card:hover{border-color:rgba(255,140,42,.4);transform:translateY(-4px);box-shadow:0 16px 40px rgba(0,0,0,.4);}
+.ch-icon{width:56px;height:56px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:28px;}
+.ch-name{font-size:14px;font-weight:700;color:var(--text);}
+.ch-desc{font-size:11px;color:var(--text-muted);}
+.watch-btn{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:20px;padding:5px 14px;font-size:12px;color:var(--text-muted);font-family:'Tajawal',sans-serif;font-weight:500;transition:all .2s;margin-top:4px;}
+.channel-card:hover .watch-btn{background:rgba(255,140,42,.15);border-color:var(--gold);color:var(--gold);}
+.cat-news{background:linear-gradient(135deg,rgba(255,71,87,.2),rgba(255,71,87,.05));}
+.cat-trading{background:linear-gradient(135deg,rgba(0,200,150,.2),rgba(0,200,150,.05));}
+.cat-business{background:linear-gradient(135deg,rgba(30,60,140,.2),rgba(30,60,140,.05));}
+.cat-intl{background:linear-gradient(135deg,rgba(255,140,42,.2),rgba(255,140,42,.05));}
+
+/* AD MID */
+.ad-mid{background:var(--dark3);border:1px dashed rgba(255,140,42,.25);border-radius:12px;padding:20px;text-align:center;margin:32px 0;}
+.ad-mid .ad-label{display:block;margin-bottom:10px;}
+.ad-mid-slot{background:linear-gradient(90deg,rgba(255,140,42,.05),rgba(30,60,140,.05));border-radius:8px;padding:20px;min-height:90px;display:flex;align-items:center;justify-content:center;font-size:13px;color:var(--text-muted);}
+
+/* SEARCH */
+.search-box{background:var(--dark3);border:1px solid rgba(0,200,150,.25);border-radius:16px;padding:28px;margin-bottom:24px;}
+.search-row{display:flex;gap:10px;flex-wrap:wrap;}
+.s-input{flex:1;min-width:200px;background:var(--dark2);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:13px 18px;color:var(--text);font-family:'Tajawal',sans-serif;font-size:15px;outline:none;direction:ltr;transition:border-color .2s;}
+.s-input:focus{border-color:rgba(0,200,150,.5);}
+.s-btn{background:linear-gradient(135deg,#00c896,#009e76);border:none;border-radius:10px;padding:13px 28px;color:white;font-family:'Tajawal',sans-serif;font-size:15px;font-weight:700;cursor:pointer;white-space:nowrap;transition:opacity .2s;}
+.s-btn:hover{opacity:.85;}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px;align-items:center;}
+.chip{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:4px 14px;font-size:12px;color:var(--text-muted);cursor:pointer;font-family:'Tajawal',sans-serif;transition:all .2s;direction:ltr;}
+.chip:hover{background:rgba(0,200,150,.15);border-color:var(--green);color:var(--green);}
+
+/* PRICE CARD */
+.price-card{background:var(--dark3);border:1px solid rgba(0,200,150,.2);border-radius:16px;padding:24px;margin-bottom:20px;display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:20px;}
+.p-symbol{font-size:24px;font-weight:900;color:var(--gold);}
+.p-badge{font-size:11px;padding:3px 10px;border-radius:20px;background:rgba(0,200,150,.15);color:#00c896;font-weight:600;}
+.p-name{font-size:13px;color:var(--text-muted);margin:6px 0 10px;}
+.p-price{font-size:36px;font-weight:900;color:var(--text);}
+.p-up{font-size:16px;font-weight:700;color:var(--green);}
+.p-down{font-size:16px;font-weight:700;color:var(--red);}
+.p-stats{display:flex;flex-direction:column;gap:8px;min-width:170px;}
+.p-stat{display:flex;justify-content:space-between;gap:16px;font-size:12px;}
+.p-stat-label{color:var(--text-muted);}
+
+/* CHART */
+.chart-card{background:var(--dark3);border:1px solid rgba(255,255,255,.07);border-radius:16px;overflow:hidden;margin-bottom:20px;}
+.chart-hdr{padding:14px 20px;border-bottom:1px solid rgba(255,255,255,.06);display:flex;align-items:center;gap:8px;}
+
+/* ANALYSIS */
+.analysis-card{background:var(--dark3);border:1px solid rgba(255,140,42,.2);border-radius:16px;padding:24px;margin-bottom:20px;}
+.a-hdr{display:flex;align-items:center;gap:8px;margin-bottom:16px;}
+.a-title{font-size:15px;font-weight:700;color:var(--gold);}
+.a-body{font-size:14px;line-height:1.9;color:var(--text);}
+.a-foot{margin-top:16px;padding-top:16px;border-top:1px solid rgba(255,255,255,.06);display:flex;gap:10px;flex-wrap:wrap;}
+
+/* BADGES */
+.b-buy{background:rgba(0,200,150,.15);border:1px solid rgba(0,200,150,.3);color:#00c896;padding:6px 16px;border-radius:20px;font-size:13px;font-weight:700;}
+.b-sell{background:rgba(255,71,87,.15);border:1px solid rgba(255,71,87,.3);color:#ff4757;padding:6px 16px;border-radius:20px;font-size:13px;font-weight:700;}
+.b-hold{background:rgba(255,140,42,.15);border:1px solid rgba(255,140,42,.3);color:var(--gold);padding:6px 16px;border-radius:20px;font-size:13px;font-weight:700;}
+.b-rh{background:rgba(255,71,87,.1);border:1px solid rgba(255,71,87,.2);color:#ff4757;padding:6px 16px;border-radius:20px;font-size:12px;}
+.b-rm{background:rgba(255,140,42,.1);border:1px solid rgba(255,140,42,.2);color:var(--gold);padding:6px 16px;border-radius:20px;font-size:12px;}
+.b-rl{background:rgba(0,200,150,.1);border:1px solid rgba(0,200,150,.2);color:#00c896;padding:6px 16px;border-radius:20px;font-size:12px;}
+
+/* ACTION BUTTONS */
+.action-btns{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:24px;}
+.btn-awaid{display:flex;align-items:center;gap:8px;background:linear-gradient(135deg,#1a6b3c,#0d4526);border:1px solid #2a8c50;border-radius:12px;padding:14px 22px;color:white;font-family:'Tajawal',sans-serif;font-size:14px;font-weight:700;cursor:pointer;text-decoration:none;transition:all .2s;}
+.btn-awaid:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,200,100,.2);}
+.btn-binance{display:flex;align-items:center;gap:8px;background:linear-gradient(135deg,#3d2800,#291a00);border:1px solid rgba(240,185,11,.3);border-radius:12px;padding:14px 22px;color:#f0b90b;font-family:'Tajawal',sans-serif;font-size:14px;font-weight:700;cursor:pointer;text-decoration:none;transition:all .2s;}
+.btn-binance:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(240,185,11,.15);}
+.btn-tv-link{display:flex;align-items:center;gap:8px;background:linear-gradient(135deg,#1a2a4a,#0d1a30);border:1px solid rgba(30,60,140,.3);border-radius:12px;padding:14px 22px;color:#4a90ff;font-family:'Tajawal',sans-serif;font-size:14px;font-weight:700;cursor:pointer;text-decoration:none;transition:all .2s;}
+.btn-tv-link:hover{transform:translateY(-2px);}
+
+/* DISCLAIMER */
+.disclaimer{background:rgba(255,71,87,.06);border:1px solid rgba(255,71,87,.15);border-radius:10px;padding:12px 16px;font-size:12px;color:var(--text-muted);line-height:1.7;}
+
+/* LOADING */
+.ldots{display:inline-flex;gap:4px;align-items:center;}
+.ldots span{width:6px;height:6px;background:var(--text-muted);border-radius:50%;animation:dp 1.2s infinite;}
+.ldots span:nth-child(2){animation-delay:.2s}.ldots span:nth-child(3){animation-delay:.4s}
+@keyframes dp{0%,80%,100%{transform:scale(.6);opacity:.4}40%{transform:scale(1);opacity:1}}
+
+/* EMPTY */
+.empty-state{text-align:center;padding:48px 24px;color:var(--text-muted);}
+.empty-state .emoji{font-size:48px;margin-bottom:16px;}
+.empty-state h3{font-size:16px;font-weight:600;margin-bottom:8px;color:var(--text);}
+
+/* FOOTER */
+footer{background:var(--dark2);border-top:1px solid rgba(255,255,255,.05);padding:28px 24px;text-align:center;position:relative;z-index:1;}
+.footer-logo{font-size:22px;font-weight:900;background:linear-gradient(135deg,var(--gold-light),var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:8px;}
+
+@media(max-width:600px){
+  .channels-grid{grid-template-columns:repeat(2,1fr);}
+  .ad-slot{min-width:unset;padding:10px 20px;}
+  .p-price{font-size:28px;}
+}
+</style>
+</head>
+<body>
+
+<div class="ad-banner">
+  <div class="ad-banner-inner">
+    <span class="ad-label">إعلان</span>
+    <div class="ad-slot">📢 مساحة إعلانية 728×90 — ضع كود Google AdSense هنا</div>
+  </div>
+</div>
+
+<header>
+  <div class="header-inner">
+    <a href="#" class="logo">
+      <div class="logo-icon">📡</div>
+      <div style="display:flex;flex-direction:column;">
+        <span class="logo-name">فينطاس</span>
+        <span class="logo-sub">FINTAS.COM</span>
+      </div>
+    </a>
+    <div class="header-live"><div class="live-dot"></div><span class="live-text">LIVE</span></div>
+  </div>
+</header>
+
+<div class="ticker-bar">
+  <div class="ticker-inner">
+    <span class="ticker-item"><span class="tn">ذهب</span><span class="tv2">2,338$</span><span class="tu">▲ 0.4%</span></span>
+    <span class="ticker-item"><span class="tn">برنت</span><span class="tv2">82.1$</span><span class="td2">▼ 0.2%</span></span>
+    <span class="ticker-item"><span class="tn">S&amp;P 500</span><span class="tv2">5,204</span><span class="tu">▲ 0.7%</span></span>
+    <span class="ticker-item"><span class="tn">بيتكوين</span><span class="tv2">67,400$</span><span class="tu">▲ 1.2%</span></span>
+    <span class="ticker-item"><span class="tn">تداول</span><span class="tv2">2,890</span><span class="td2">▼ 0.3%</span></span>
+    <span class="ticker-item"><span class="tn">دولار/ريال</span><span class="tv2">3.75</span><span class="tu">—</span></span>
+    <span class="ticker-item"><span class="tn">ناسداك</span><span class="tv2">18,200</span><span class="tu">▲ 0.5%</span></span>
+    <span class="ticker-item"><span class="tn">يورو/دولار</span><span class="tv2">1.084</span><span class="td2">▼ 0.1%</span></span>
+    <span class="ticker-item"><span class="tn">ذهب</span><span class="tv2">2,338$</span><span class="tu">▲ 0.4%</span></span>
+    <span class="ticker-item"><span class="tn">برنت</span><span class="tv2">82.1$</span><span class="td2">▼ 0.2%</span></span>
+    <span class="ticker-item"><span class="tn">S&amp;P 500</span><span class="tv2">5,204</span><span class="tu">▲ 0.7%</span></span>
+    <span class="ticker-item"><span class="tn">بيتكوين</span><span class="tv2">67,400$</span><span class="tu">▲ 1.2%</span></span>
+    <span class="ticker-item"><span class="tn">تداول</span><span class="tv2">2,890</span><span class="td2">▼ 0.3%</span></span>
+    <span class="ticker-item"><span class="tn">ناسداك</span><span class="tv2">18,200</span><span class="tu">▲ 0.5%</span></span>
+    <span class="ticker-item"><span class="tn">يورو/دولار</span><span class="tv2">1.084</span><span class="td2">▼ 0.1%</span></span>
+  </div>
+</div>
+
+<div class="hero">
+  <h1>بوابتك لـ<span>الأخبار والتداول</span></h1>
+  <p>قنوات إخبارية، أسواق مالية، وتحليل ذكي للأسهم والعملات في مكان واحد</p>
+</div>
+
+<div class="tabs">
+  <button class="tab-btn active" onclick="showSection('all',this)">🌐 الكل</button>
+  <button class="tab-btn" onclick="showSection('news',this)">📰 أخبار عربية</button>
+  <button class="tab-btn" onclick="showSection('trading',this)">📈 تداول وأسواق</button>
+  <button class="tab-btn" onclick="showSection('business',this)">💼 اقتصاد وأعمال</button>
+  <button class="tab-btn" onclick="showSection('intl',this)">🌍 دولية</button>
+  <button class="tab-btn tab-search" onclick="showSection('search',this)">🔍 بحث الأسواق</button>
+</div>
+
+<div class="main">
+
+  <div id="sec-all" class="section active">
+    <div class="section-title">📰 قنوات الأخبار العربية</div>
+    <div class="channels-grid" id="grid-news"></div>
+    <div class="ad-mid"><span class="ad-label">إعلان</span><div class="ad-mid-slot">📢 مساحة إعلانية — ضع كود Google AdSense هنا (970×90)</div></div>
+    <div class="section-title">📈 قنوات التداول والأسواق</div>
+    <div class="channels-grid" id="grid-trading"></div>
+    <div class="ad-mid"><span class="ad-label">إعلان</span><div class="ad-mid-slot">📢 مساحة إعلانية — ضع كود Google AdSense هنا</div></div>
+    <div class="section-title">💼 اقتصاد وأعمال</div>
+    <div class="channels-grid" id="grid-business"></div>
+    <div class="section-title">🌍 قنوات دولية</div>
+    <div class="channels-grid" id="grid-intl"></div>
+  </div>
+
+  <div id="sec-news" class="section"><div class="section-title">📰 قنوات الأخبار العربية</div><div class="channels-grid" id="grid-news2"></div></div>
+  <div id="sec-trading" class="section"><div class="section-title">📈 قنوات التداول والأسواق</div><div class="channels-grid" id="grid-trading2"></div></div>
+  <div id="sec-business" class="section"><div class="section-title">💼 اقتصاد وأعمال</div><div class="channels-grid" id="grid-business2"></div></div>
+  <div id="sec-intl" class="section"><div class="section-title">🌍 قنوات دولية</div><div class="channels-grid" id="grid-intl2"></div></div>
+
+  <!-- SEARCH SECTION -->
+  <div id="sec-search" class="section">
+    <div class="section-title">🔍 بحث الأسهم والعملات المشفرة</div>
+
+    <div class="search-box">
+      <p style="font-size:14px;color:var(--text-muted);margin-bottom:16px;text-align:center;">
+        ابحث عن أي سهم أو عملة مشفرة — سعر حي، رسم بياني تفاعلي، وتحليل ذكي
+      </p>
+      <div class="search-row">
+        <input id="symIn" class="s-input" type="text" placeholder="مثال: AAPL  |  TSLA  |  2222.SR  |  BTCUSDT" onkeydown="if(event.key==='Enter')doSearch()"/>
+        <button class="s-btn" onclick="doSearch()">🔍 بحث</button>
+      </div>
+      <div class="chips">
+        <span style="font-size:12px;color:var(--text-muted);">اقتراحات:</span>
+        <button class="chip" onclick="qs('AAPL')">🍎 AAPL</button>
+        <button class="chip" onclick="qs('TSLA')">🚗 TSLA</button>
+        <button class="chip" onclick="qs('NVDA')">💻 NVDA</button>
+        <button class="chip" onclick="qs('2222.SR')">🛢 أرامكو</button>
+        <button class="chip" onclick="qs('BTCUSDT')">₿ BTC</button>
+        <button class="chip" onclick="qs('ETHUSDT')">🔷 ETH</button>
+        <button class="chip" onclick="qs('SOLUSDT')">☀️ SOL</button>
+        <button class="chip" onclick="qs('XAUUSD')">🥇 ذهب</button>
+      </div>
+    </div>
+
+    <div id="srResults" style="display:none;">
+
+      <div class="price-card">
+        <div>
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:4px;">
+            <span id="pSym" class="p-symbol">—</span>
+            <span id="pBadge" class="p-badge">—</span>
+          </div>
+          <div id="pName" class="p-name">—</div>
+          <div style="display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;">
+            <span id="pPrice" class="p-price">—</span>
+            <span id="pChange">—</span>
+          </div>
+        </div>
+        <div class="p-stats">
+          <div class="p-stat"><span class="p-stat-label">أعلى اليوم</span><span id="pH" style="color:var(--green);font-weight:600;font-size:12px;">—</span></div>
+          <div class="p-stat"><span class="p-stat-label">أدنى اليوم</span><span id="pL" style="color:var(--red);font-weight:600;font-size:12px;">—</span></div>
+          <div class="p-stat"><span class="p-stat-label">حجم التداول</span><span id="pV" style="color:var(--text);font-weight:600;font-size:12px;">—</span></div>
+          <div class="p-stat"><span class="p-stat-label">القيمة السوقية</span><span id="pCap" style="color:var(--text);font-weight:600;font-size:12px;">—</span></div>
+        </div>
+      </div>
+
+      <div class="chart-card">
+        <div class="chart-hdr">
+          <span style="font-size:14px;font-weight:700;">📊 الرسم البياني التفاعلي</span>
+          <span style="font-size:11px;color:var(--text-muted);margin-right:auto;">مدعوم من TradingView</span>
+        </div>
+        <div id="tvChart" style="height:450px;"></div>
+      </div>
+
+      <div class="analysis-card">
+        <div class="a-hdr">
+          <span style="font-size:18px;">🤖</span>
+          <span class="a-title">تحليل ذكي مختصر</span>
+          <span style="font-size:11px;color:var(--text-muted);margin-right:auto;">مدعوم بالذكاء الاصطناعي</span>
+        </div>
+        <div id="aText" class="a-body">
+          <span style="color:var(--text-muted);"><span class="ldots"><span></span><span></span><span></span></span> جاري التحليل...</span>
+        </div>
+        <div class="a-foot">
+          <span id="aSig" style="display:none;"></span>
+          <span id="aRisk" style="display:none;"></span>
+        </div>
+      </div>
+
+      <div id="aBtns" class="action-btns"></div>
+
+      <div class="disclaimer">
+        ⚠️ <strong style="color:var(--red);">تنبيه مهم:</strong> هذا التحليل لأغراض معلوماتية فقط وليس توصية استثمارية. التداول ينطوي على مخاطر عالية. استشر مستشاراً مالياً مرخصاً قبل اتخاذ أي قرار.
+      </div>
+    </div>
+
+    <div id="srEmpty" class="empty-state">
+      <div class="emoji">📊</div>
+      <h3>ابحث عن أي سهم أو عملة مشفرة</h3>
+      <p>اكتب الرمز أعلاه للحصول على السعر الحي، الرسم البياني، والتحليل الذكي</p>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-logo">فينطاس</div>
+  <p>قنوات يوتيوب الرسمية | بيانات TradingView و Binance</p>
+  <p style="margin-top:6px;">fintas.com © 2025</p>
+</footer>
+
+<script src="https://s3.tradingview.com/tv.js"></script>
+<script>
+// ====== CHANNELS ======
+const CH = {
+  news:[
+    {name:"الجزيرة",desc:"بث مباشر 24/7",icon:"🔵",url:"https://www.youtube.com/@aljazeerachannel/streams",color:"cat-news"},
+    {name:"العربية",desc:"أخبار عربية ودولية",icon:"🔴",url:"https://www.youtube.com/@AlArabiya/streams",color:"cat-news"},
+    {name:"سكاي نيوز عربية",desc:"بث مباشر مستمر",icon:"🌐",url:"https://www.youtube.com/@skynewsarabia/streams",color:"cat-news"},
+    {name:"MBC",desc:"قناة MBC الإخبارية",icon:"📺",url:"https://www.youtube.com/@MBCgroup/streams",color:"cat-news"},
+    {name:"قناة الحدث",desc:"أحدث الأخبار",icon:"⚡",url:"https://www.youtube.com/@AlHadath/streams",color:"cat-news"},
+    {name:"روسيا اليوم",desc:"RT Arabic بث مباشر",icon:"🌍",url:"https://www.youtube.com/@RTarabic/streams",color:"cat-news"},
+  ],
+  trading:[
+    {name:"CNBC عربية",desc:"القناة الاقتصادية الأولى عربياً",icon:"📊",url:"https://www.youtube.com/user/cnbcarabiaTV/streams",color:"cat-trading"},
+    {name:"مباشر TV",desc:"أسواق المال في 12 دولة عربية",icon:"💹",url:"https://www.youtube.com/channel/UC7hnxb7gD4nKZdZk3ZlZCYg/streams",color:"cat-trading"},
+    {name:"الجزيرة مباشر",desc:"بث مباشر بدون تعليق",icon:"📡",url:"https://www.youtube.com/channel/UCCv1Pd24oPErw5S7zJWltnQ/streams",color:"cat-trading"},
+    {name:"العربية للأعمال",desc:"أسواق واقتصاد خليجي",icon:"🏦",url:"https://www.youtube.com/@AlArabiyaBusiness/streams",color:"cat-trading"},
+    {name:"اقتصاد الشرق",desc:"Bloomberg Asharq عربي",icon:"🌏",url:"https://www.youtube.com/@asharqbusiness/streams",color:"cat-trading"},
+    {name:"Forbes Middle East",desc:"أعمال وريادة وأسواق",icon:"🏆",url:"https://www.youtube.com/@ForbesMiddleEast/streams",color:"cat-trading"},
+  ],
+  business:[
+    {name:"العربية للأعمال",desc:"اقتصاد وشركات",icon:"💼",url:"https://www.youtube.com/@AlArabiyaBusiness/streams",color:"cat-business"},
+    {name:"CNBC عربية",desc:"أسواق مالية عالمية",icon:"📈",url:"https://www.youtube.com/@CNBCArabia/streams",color:"cat-business"},
+    {name:"Forbes Middle East",desc:"أعمال وريادة",icon:"🏆",url:"https://www.youtube.com/@ForbesMiddleEast/streams",color:"cat-business"},
+    {name:"اقتصاد الشرق",desc:"Bloomberg Asharq",icon:"🌏",url:"https://www.youtube.com/@asharqbusiness/streams",color:"cat-business"},
+  ],
+  intl:[
+    {name:"Bloomberg",desc:"أسواق عالمية",icon:"🇺🇸",url:"https://www.youtube.com/@Bloomberg/streams",color:"cat-intl"},
+    {name:"CNBC",desc:"بث مباشر أمريكي",icon:"📡",url:"https://www.youtube.com/@CNBC/streams",color:"cat-intl"},
+    {name:"Fox Business",desc:"أخبار مالية",icon:"🦊",url:"https://www.youtube.com/@FoxBusiness/streams",color:"cat-intl"},
+    {name:"Reuters",desc:"أحداث عالمية",icon:"🌐",url:"https://www.youtube.com/@Reuters/streams",color:"cat-intl"},
+  ]
+};
+
+function buildCard(c){
+  return `<a href="${c.url}" target="_blank" class="channel-card">
+    <div class="ch-icon ${c.color}">${c.icon}</div>
+    <div><div class="ch-name">${c.name}</div><div class="ch-desc">${c.desc}</div></div>
+    <div class="watch-btn">▶ شاهد الآن</div>
+  </a>`;
+}
+function rg(id,list){const e=document.getElementById(id);if(e)e.innerHTML=list.map(buildCard).join('');}
+['news','trading','business','intl'].forEach(k=>{rg('grid-'+k,CH[k]);rg('grid-'+k+'2',CH[k]);});
+
+function showSection(n,btn){
+  document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+  document.getElementById('sec-'+n).classList.add('active');
+  btn.classList.add('active');
+}
+
+// ====== MARKET SEARCH ======
+function qs(s){document.getElementById('symIn').value=s;doSearch();}
+
+function parseSymbol(raw){
+  const s=raw.trim().toUpperCase();
+  const CRYPTOS=['BTC','ETH','SOL','BNB','XRP','ADA','DOGE','AVAX','MATIC','DOT','LINK','LTC','UNI','ATOM'];
+  if(s.endsWith('USDT')) return {tv:'BINANCE:'+s,bn:s,type:'crypto'};
+  if(CRYPTOS.includes(s)) return {tv:'BINANCE:'+s+'USDT',bn:s+'USDT',type:'crypto'};
+  if(s.endsWith('.SR')) return {tv:'TADAWUL:'+s.replace('.SR',''),bn:null,type:'saudi'};
+  if(s==='XAUUSD') return {tv:'OANDA:XAUUSD',bn:null,type:'commodity'};
+  if(s==='EURUSD'||s==='GBPUSD'||s==='USDJPY') return {tv:'OANDA:'+s,bn:null,type:'forex'};
+  return {tv:'NASDAQ:'+s,bn:null,type:'stock'};
+}
+
+async function doSearch(){
+  const raw=document.getElementById('symIn').value.trim();
+  if(!raw)return;
+  const {tv,bn,type}=parseSymbol(raw);
+  const sym=raw.trim().toUpperCase();
+
+  document.getElementById('srEmpty').style.display='none';
+  document.getElementById('srResults').style.display='block';
+
+  // Reset
+  ['pSym','pName','pPrice','pChange','pH','pL','pV','pCap'].forEach(id=>document.getElementById(id).textContent='—');
+  const typeLabels={crypto:'عملة مشفرة',saudi:'سوق سعودي',commodity:'سلعة',forex:'فوركس',stock:'سهم أمريكي'};
+  document.getElementById('pBadge').textContent=typeLabels[type]||'سهم';
+  document.getElementById('aText').innerHTML='<span style="color:var(--text-muted);"><span class="ldots"><span></span><span></span><span></span></span> جاري جلب البيانات والتحليل...</span>';
+  document.getElementById('aSig').style.display='none';
+  document.getElementById('aRisk').style.display='none';
+  document.getElementById('aBtns').innerHTML='';
+
+  loadChart(tv);
+
+  if(type==='crypto') await fetchCrypto(bn, sym.replace('USDT',''));
+  else fillStockMock(sym,type);
+
+  await getAnalysis(sym,type);
+  buildBtns(sym,type,bn,tv);
+}
+
+function loadChart(tvSym){
+  const el=document.getElementById('tvChart');
+  el.innerHTML='';
+  try{
+    new TradingView.widget({
+      container_id:'tvChart',symbol:tvSym,interval:'D',
+      timezone:'Asia/Riyadh',theme:'dark',style:'1',locale:'ar',
+      toolbar_bg:'#181c24',enable_publishing:false,
+      hide_top_toolbar:false,save_image:false,
+      height:450,width:'100%',
+      studies:['RSI@tv-basicstudies','MACD@tv-basicstudies']
+    });
+  }catch(e){
+    el.innerHTML=`<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:450px;gap:12px;color:var(--text-muted);">
+      <span style="font-size:40px;">📊</span>
+      <p>افتح الرسم البياني على TradingView</p>
+      <a href="https://www.tradingview.com/chart/?symbol=${encodeURIComponent(tvSym)}" target="_blank" class="btn-tv-link">🔗 فتح على TradingView</a>
+    </div>`;
+  }
+}
+
+async function fetchCrypto(bn, label){
+  try{
+    const r=await fetch(`https://api.binance.com/api/v3/ticker/24hr?symbol=${bn}`);
+    const d=await r.json();
+    if(d.code)return;
+    const price=parseFloat(d.lastPrice);
+    const ch=parseFloat(d.priceChangePercent);
+    const NAMES={BTC:'بيتكوين',ETH:'إيثيريوم',SOL:'سولانا',BNB:'باينانس كوين',XRP:'ريبل',ADA:'كاردانو',DOGE:'دوجكوين',AVAX:'أفالانش',MATIC:'بوليجون',DOT:'بولكادوت',LINK:'تشين لينك',LTC:'لايتكوين'};
+    document.getElementById('pSym').textContent=label;
+    document.getElementById('pName').textContent=NAMES[label]||label+' Crypto';
+    document.getElementById('pPrice').textContent= price>1000?'$'+price.toLocaleString('en',{maximumFractionDigits:2}):'$'+price.toFixed(price<0.01?6:2);
+    const ce=document.getElementById('pChange');
+    ce.textContent=(ch>=0?'▲ +':'▼ ')+ch.toFixed(2)+'%';
+    ce.className=ch>=0?'p-up':'p-down';
+    document.getElementById('pH').textContent='$'+parseFloat(d.highPrice).toLocaleString('en',{maximumFractionDigits:2});
+    document.getElementById('pL').textContent='$'+parseFloat(d.lowPrice).toLocaleString('en',{maximumFractionDigits:2});
+    document.getElementById('pV').textContent=(parseFloat(d.volume)/1e6).toFixed(2)+'M';
+    document.getElementById('pCap').textContent='—';
+  }catch(e){}
+}
+
+function fillStockMock(sym,type){
+  const M={
+    AAPL:{n:'Apple Inc.',p:'$189.30',c:'+1.24%',u:true,h:'$191.05',l:'$187.20',v:'58.4M',cap:'$2.95T'},
+    TSLA:{n:'Tesla Inc.',p:'$177.50',c:'-2.10%',u:false,h:'$182.00',l:'$175.30',v:'91.2M',cap:'$565B'},
+    NVDA:{n:'NVIDIA Corp.',p:'$875.40',c:'+3.20%',u:true,h:'$882.00',l:'$865.10',v:'42.1M',cap:'$2.16T'},
+    MSFT:{n:'Microsoft Corp.',p:'$415.20',c:'+0.85%',u:true,h:'$418.00',l:'$412.50',v:'22.3M',cap:'$3.09T'},
+    GOOGL:{n:'Alphabet Inc.',p:'$175.10',c:'+1.10%',u:true,h:'$177.50',l:'$173.20',v:'19.8M',cap:'$2.19T'},
+    AMZN:{n:'Amazon.com Inc.',p:'$186.60',c:'+0.92%',u:true,h:'$188.90',l:'$184.10',v:'28.5M',cap:'$1.95T'},
+    '2222':{n:'أرامكو السعودية',p:'SAR 28.50',c:'-0.35%',u:false,h:'SAR 29.10',l:'SAR 28.20',v:'15.2M',cap:'SAR 6.8T'},
+    XAUUSD:{n:'الذهب / دولار',p:'$2,338',c:'+0.42%',u:true,h:'$2,351',l:'$2,318',v:'—',cap:'—'},
+  };
+  const key=sym.replace('.SR','');
+  const s=M[key]||{n:sym+' ('+type+')',p:'—',c:'—',u:true,h:'—',l:'—',v:'—',cap:'—'};
+  document.getElementById('pSym').textContent=sym;
+  document.getElementById('pName').textContent=s.n;
+  document.getElementById('pPrice').textContent=s.p;
+  const ce=document.getElementById('pChange');
+  ce.textContent=s.c; ce.className=s.u?'p-up':'p-down';
+  document.getElementById('pH').textContent=s.h;
+  document.getElementById('pL').textContent=s.l;
+  document.getElementById('pV').textContent=s.v;
+  document.getElementById('pCap').textContent=s.cap;
+}
+
+async function getAnalysis(sym,type){
+  try{
+    const typeAr={crypto:'عملة مشفرة',saudi:'سهم سعودي',stock:'سهم أمريكي',commodity:'سلعة',forex:'عملة فوركس'};
+    const prompt=`أنت محلل مالي محترف. قدم تحليلاً مختصراً باللغة العربية للرمز: ${sym} (${typeAr[type]||'أصل مالي'})
+
+اكتب التحليل بهذا الشكل بدون نقاط أو قوائم، فقرات قصيرة:
+
+**نبذة:** جملتان عن هذا الأصل وأهميته.
+**الأداء الأخير:** كيف يؤدي في الفترة الأخيرة.
+**العوامل المؤثرة:** أهم عاملين أو ثلاثة تؤثر على سعره.
+**التوقعات:** نظرة مستقبلية قصيرة.
+**التوصية:** شراء أو انتظار أو بيع مع سبب مختصر جداً.
+**مستوى المخاطرة:** مرتفع أو متوسط أو منخفض.
+
+اجعل الرد مختصراً ومفيداً، لا تتجاوز 180 كلمة.`;
+
+    const res=await fetch('https://api.anthropic.com/v1/messages',{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:1000,messages:[{role:'user',content:prompt}]})
+    });
+    const data=await res.json();
+    const text=data.content?.[0]?.text||'';
+
+    const fmt=text
+      .replace(/\*\*(.*?)\*\*/g,'<strong style="color:var(--gold)">$1</strong>')
+      .replace(/\n\n/g,'</p><p style="margin-top:10px;">')
+      .replace(/\n/g,'<br>');
+
+    document.getElementById('aText').innerHTML='<p>'+fmt+'</p>';
+
+    let sig='hold', risk='med';
+    if(/توصية.*شراء|شراء/i.test(text)) sig='buy';
+    else if(/توصية.*بيع|بيع/i.test(text)) sig='sell';
+    if(/مخاطرة.*مرتفع|مرتفع/i.test(text)) risk='high';
+    else if(/مخاطرة.*منخفض|منخفض/i.test(text)) risk='low';
+
+    const se=document.getElementById('aSig'); se.style.display='inline-block';
+    if(sig==='buy'){se.className='b-buy';se.textContent='📈 إشارة شراء';}
+    else if(sig==='sell'){se.className='b-sell';se.textContent='📉 إشارة بيع';}
+    else{se.className='b-hold';se.textContent='⏳ انتظار';}
+
+    const re=document.getElementById('aRisk'); re.style.display='inline-block';
+    if(risk==='high'){re.className='b-rh';re.textContent='⚠️ مخاطرة مرتفعة';}
+    else if(risk==='low'){re.className='b-rl';re.textContent='✅ مخاطرة منخفضة';}
+    else{re.className='b-rm';re.textContent='🟡 مخاطرة متوسطة';}
+
+  }catch(e){
+    document.getElementById('aText').innerHTML='<span style="color:var(--text-muted);">تعذر جلب التحليل.</span>';
+  }
+}
+
+function buildBtns(sym,type,bn,tv){
+  const c=document.getElementById('aBtns');
+  let h='';
+
+  // TradingView always
+  h+=`<a href="https://www.tradingview.com/chart/?symbol=${encodeURIComponent(tv)}" target="_blank" class="btn-tv-link">📊 تحليل تفاعلي على TradingView</a>`;
+
+  if(type==='crypto'){
+    const bSym=bn||sym+'USDT';
+    h+=`<a href="https://www.binance.com/register?ref=1120357563&utm_medium=web_share_copy" target="_blank" class="btn-binance">
+      <span style="font-size:16px;font-weight:900;">B</span> شراء على Binance
+    </a>`;
+  } else {
+    h+=`<a href="https://www.awaid.com" target="_blank" class="btn-awaid">
+      🇸🇦 شراء عبر عوائد
+    </a>`;
+  }
+
+  if(type==='stock'||type==='saudi'){
+    h+=`<a href="https://www.binance.com/register?ref=1120357563&utm_medium=web_share_copy" target="_blank" class="btn-binance">
+      <span style="font-size:16px;font-weight:900;">B</span> Binance
+    </a>`;
+  }
+
+  c.innerHTML=h;
+}
+</script>
+</body>
+</html>
