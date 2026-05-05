@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
@@ -21,62 +22,62 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
 /* AD */
 .ad-banner{background:linear-gradient(135deg,#0a0e1c,#0f1528);border-bottom:1px solid rgba(255,140,42,.2);padding:10px 20px;text-align:center;position:relative;z-index:10;}
 .ad-banner-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;}
-.ad-label{font-size:10px;color:var(--text-muted);background:rgba(255,255,255,.05);padding:2px 8px;border-radius:3px;letter-spacing:1px;}
-.ad-slot{background:linear-gradient(90deg,rgba(255,140,42,.08),rgba(30,60,140,.08));border:1px dashed rgba(255,140,42,.3);border-radius:6px;padding:10px 40px;font-size:13px;color:var(--gold);cursor:pointer;transition:all .3s;min-width:728px;max-width:100%;}
-.ad-slot:hover{border-color:var(--gold);}
+.ad-label{font-size:10px;color:var(–text-muted);background:rgba(255,255,255,.05);padding:2px 8px;border-radius:3px;letter-spacing:1px;}
+.ad-slot{background:linear-gradient(90deg,rgba(255,140,42,.08),rgba(30,60,140,.08));border:1px dashed rgba(255,140,42,.3);border-radius:6px;padding:10px 40px;font-size:13px;color:var(–gold);cursor:pointer;transition:all .3s;min-width:728px;max-width:100%;}
+.ad-slot:hover{border-color:var(–gold);}
 
 /* HEADER */
 header{position:relative;z-index:10;padding:0 24px;border-bottom:1px solid rgba(255,140,42,.15);background:rgba(11,15,30,.95);backdrop-filter:blur(20px);}
 .header-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:72px;}
 .logo{display:flex;align-items:center;gap:12px;text-decoration:none;}
-.logo-icon{width:44px;height:44px;background:linear-gradient(135deg,var(--gold),#c05800);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:22px;box-shadow:0 4px 20px rgba(255,140,42,.35);}
-.logo-name{font-size:28px;font-weight:900;background:linear-gradient(135deg,var(--gold-light),var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;line-height:1;}
-.logo-sub{font-size:11px;color:var(--text-muted);font-weight:300;letter-spacing:2px;}
+.logo-icon{width:44px;height:44px;background:linear-gradient(135deg,var(–gold),#c05800);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:22px;box-shadow:0 4px 20px rgba(255,140,42,.35);}
+.logo-name{font-size:28px;font-weight:900;background:linear-gradient(135deg,var(–gold-light),var(–gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;line-height:1;}
+.logo-sub{font-size:11px;color:var(–text-muted);font-weight:300;letter-spacing:2px;}
 .header-live{display:flex;align-items:center;gap:8px;}
-.live-dot{width:8px;height:8px;background:var(--red);border-radius:50%;animation:pulse 1.5s infinite;}
+.live-dot{width:8px;height:8px;background:var(–red);border-radius:50%;animation:pulse 1.5s infinite;}
 @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.8)}}
-.live-text{font-size:12px;color:var(--red);font-weight:700;letter-spacing:2px;}
+.live-text{font-size:12px;color:var(–red);font-weight:700;letter-spacing:2px;}
 
 /* TICKER */
-.ticker-bar{background:var(--dark2);border-bottom:1px solid rgba(255,255,255,.05);padding:8px 0;overflow:hidden;position:relative;z-index:9;}
+.ticker-bar{background:var(–dark2);border-bottom:1px solid rgba(255,255,255,.05);padding:8px 0;overflow:hidden;position:relative;z-index:9;}
 .ticker-inner{display:flex;gap:48px;animation:ticker 30s linear infinite;white-space:nowrap;width:max-content;}
 @keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 .ticker-item{display:inline-flex;align-items:center;gap:8px;font-size:12px;}
-.tn{color:var(--text-muted)}.tv2{color:var(--text);font-weight:600}.tu{color:var(--green)}.td2{color:var(--red)}
+.tn{color:var(–text-muted)}.tv2{color:var(–text);font-weight:600}.tu{color:var(–green)}.td2{color:var(–red)}
 
 /* HERO */
 .hero{position:relative;z-index:1;text-align:center;padding:52px 24px 36px;}
 .hero h1{font-size:clamp(28px,5vw,48px);font-weight:900;line-height:1.2;margin-bottom:12px;}
-.hero h1 span{background:linear-gradient(135deg,var(--gold-light),var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
-.hero p{color:var(--text-muted);font-size:15px;max-width:520px;margin:0 auto;}
+.hero h1 span{background:linear-gradient(135deg,var(–gold-light),var(–gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+.hero p{color:var(–text-muted);font-size:15px;max-width:520px;margin:0 auto;}
 
 /* TABS */
 .tabs{display:flex;justify-content:center;gap:8px;padding:0 24px 32px;position:relative;z-index:1;flex-wrap:wrap;}
-.tab-btn{padding:10px 22px;border-radius:50px;border:1px solid rgba(255,255,255,.08);background:var(--dark3);color:var(--text-muted);font-family:'Tajawal',sans-serif;font-size:14px;font-weight:500;cursor:pointer;transition:all .25s;}
-.tab-btn:hover{border-color:rgba(255,140,42,.4);color:var(--gold);}
-.tab-btn.active{background:linear-gradient(135deg,rgba(255,140,42,.2),rgba(255,140,42,.05));border-color:var(--gold);color:var(--gold);font-weight:700;}
-.tab-search{border-color:rgba(0,200,150,.3)!important;color:var(--green)!important;}
-.tab-search.active{background:linear-gradient(135deg,rgba(0,200,150,.2),rgba(0,200,150,.05))!important;border-color:var(--green)!important;color:var(--green)!important;}
+.tab-btn{padding:10px 22px;border-radius:50px;border:1px solid rgba(255,255,255,.08);background:var(–dark3);color:var(–text-muted);font-family:‘Tajawal’,sans-serif;font-size:14px;font-weight:500;cursor:pointer;transition:all .25s;}
+.tab-btn:hover{border-color:rgba(255,140,42,.4);color:var(–gold);}
+.tab-btn.active{background:linear-gradient(135deg,rgba(255,140,42,.2),rgba(255,140,42,.05));border-color:var(–gold);color:var(–gold);font-weight:700;}
+.tab-search{border-color:rgba(0,200,150,.3)!important;color:var(–green)!important;}
+.tab-search.active{background:linear-gradient(135deg,rgba(0,200,150,.2),rgba(0,200,150,.05))!important;border-color:var(–green)!important;color:var(–green)!important;}
 .tab-news-sites{border-color:rgba(100,149,237,.3)!important;color:#6495ed!important;}
 .tab-news-sites.active{background:linear-gradient(135deg,rgba(100,149,237,.2),rgba(100,149,237,.05))!important;border-color:#6495ed!important;color:#6495ed!important;}
 
 /* MAIN */
 .main{max-width:1200px;margin:0 auto;padding:0 24px 60px;position:relative;z-index:1;}
-.section-title{font-size:13px;font-weight:700;color:var(--text-muted);letter-spacing:3px;text-transform:uppercase;margin-bottom:20px;display:flex;align-items:center;gap:12px;}
-.section-title::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,rgba(255,140,42,.2),transparent);}
+.section-title{font-size:13px;font-weight:700;color:var(–text-muted);letter-spacing:3px;text-transform:uppercase;margin-bottom:20px;display:flex;align-items:center;gap:12px;}
+.section-title::after{content:’’;flex:1;height:1px;background:linear-gradient(90deg,rgba(255,140,42,.2),transparent);}
 .section{display:none;}.section.active{display:block;}
 
 /* CHANNELS GRID */
 .channels-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px;margin-bottom:40px;}
-.channel-card{background:var(--dark3);border:1px solid rgba(255,255,255,.06);border-radius:14px;padding:20px 16px;cursor:pointer;transition:all .3s;text-decoration:none;display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center;position:relative;overflow:hidden;opacity:0;transform:translateY(20px);animation:fadeUp .5s forwards;}
+.channel-card{background:var(–dark3);border:1px solid rgba(255,255,255,.06);border-radius:14px;padding:20px 16px;cursor:pointer;transition:all .3s;text-decoration:none;display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center;position:relative;overflow:hidden;opacity:0;transform:translateY(20px);animation:fadeUp .5s forwards;}
 @keyframes fadeUp{to{opacity:1;transform:translateY(0)}}
 .channel-card:nth-child(1){animation-delay:.05s}.channel-card:nth-child(2){animation-delay:.1s}.channel-card:nth-child(3){animation-delay:.15s}.channel-card:nth-child(4){animation-delay:.2s}.channel-card:nth-child(5){animation-delay:.25s}.channel-card:nth-child(6){animation-delay:.3s}
 .channel-card:hover{border-color:rgba(255,140,42,.4);transform:translateY(-4px);box-shadow:0 16px 40px rgba(0,0,0,.4);}
 .ch-icon{width:56px;height:56px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:28px;}
-.ch-name{font-size:14px;font-weight:700;color:var(--text);line-height:1.3;}
-.ch-desc{font-size:11px;color:var(--text-muted);line-height:1.5;}
-.watch-btn{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:20px;padding:5px 14px;font-size:12px;color:var(--text-muted);font-family:'Tajawal',sans-serif;font-weight:500;transition:all .2s;margin-top:4px;}
-.channel-card:hover .watch-btn{background:rgba(255,140,42,.15);border-color:var(--gold);color:var(--gold);}
+.ch-name{font-size:14px;font-weight:700;color:var(–text);line-height:1.3;}
+.ch-desc{font-size:11px;color:var(–text-muted);line-height:1.5;}
+.watch-btn{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:20px;padding:5px 14px;font-size:12px;color:var(–text-muted);font-family:‘Tajawal’,sans-serif;font-weight:500;transition:all .2s;margin-top:4px;}
+.channel-card:hover .watch-btn{background:rgba(255,140,42,.15);border-color:var(–gold);color:var(–gold);}
 .cat-news{background:linear-gradient(135deg,rgba(255,71,87,.2),rgba(255,71,87,.05));}
 .cat-trading{background:linear-gradient(135deg,rgba(0,200,150,.2),rgba(0,200,150,.05));}
 .cat-business{background:linear-gradient(135deg,rgba(255,140,42,.2),rgba(255,140,42,.05));}
@@ -84,16 +85,16 @@ header{position:relative;z-index:10;padding:0 24px;border-bottom:1px solid rgba(
 
 /* NEWS SITES GRID */
 .news-sites-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px;margin-bottom:40px;}
-.news-site-card{background:var(--dark3);border:1px solid rgba(255,255,255,.06);border-radius:14px;padding:20px;text-decoration:none;display:flex;flex-direction:column;gap:10px;transition:all .3s;opacity:0;transform:translateY(20px);animation:fadeUp .5s forwards;}
+.news-site-card{background:var(–dark3);border:1px solid rgba(255,255,255,.06);border-radius:14px;padding:20px;text-decoration:none;display:flex;flex-direction:column;gap:10px;transition:all .3s;opacity:0;transform:translateY(20px);animation:fadeUp .5s forwards;}
 .news-site-card:hover{border-color:rgba(100,149,237,.4);transform:translateY(-4px);box-shadow:0 16px 40px rgba(0,0,0,.4);}
 .ns-header{display:flex;align-items:center;gap:12px;}
 .ns-icon{width:44px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;}
-.ns-name{font-size:15px;font-weight:700;color:var(--text);}
-.ns-type{font-size:11px;color:var(--text-muted);}
-.ns-desc{font-size:12px;color:var(--text-muted);line-height:1.6;}
+.ns-name{font-size:15px;font-weight:700;color:var(–text);}
+.ns-type{font-size:11px;color:var(–text-muted);}
+.ns-desc{font-size:12px;color:var(–text-muted);line-height:1.6;}
 .ns-tags{display:flex;gap:6px;flex-wrap:wrap;}
-.ns-tag{font-size:10px;padding:2px 8px;border-radius:10px;background:rgba(255,255,255,.06);color:var(--text-muted);}
-.visit-btn{display:flex;align-items:center;justify-content:center;gap:6px;background:rgba(100,149,237,.1);border:1px solid rgba(100,149,237,.2);border-radius:8px;padding:7px 14px;font-size:12px;color:#6495ed;font-family:'Tajawal',sans-serif;font-weight:600;transition:all .2s;margin-top:4px;}
+.ns-tag{font-size:10px;padding:2px 8px;border-radius:10px;background:rgba(255,255,255,.06);color:var(–text-muted);}
+.visit-btn{display:flex;align-items:center;justify-content:center;gap:6px;background:rgba(100,149,237,.1);border:1px solid rgba(100,149,237,.2);border-radius:8px;padding:7px 14px;font-size:12px;color:#6495ed;font-family:‘Tajawal’,sans-serif;font-weight:600;transition:all .2s;margin-top:4px;}
 .news-site-card:hover .visit-btn{background:rgba(100,149,237,.2);border-color:#6495ed;}
 .ns-cat-trading{background:linear-gradient(135deg,rgba(0,200,150,.15),rgba(0,200,150,.03));}
 .ns-cat-crypto{background:linear-gradient(135deg,rgba(255,140,42,.15),rgba(255,140,42,.03));}
@@ -101,89 +102,93 @@ header{position:relative;z-index:10;padding:0 24px;border-bottom:1px solid rgba(
 .ns-cat-general{background:linear-gradient(135deg,rgba(255,71,87,.15),rgba(255,71,87,.03));}
 
 /* AD MID */
-.ad-mid{background:var(--dark3);border:1px dashed rgba(255,140,42,.25);border-radius:12px;padding:20px;text-align:center;margin:32px 0;}
+.ad-mid{background:var(–dark3);border:1px dashed rgba(255,140,42,.25);border-radius:12px;padding:20px;text-align:center;margin:32px 0;}
 .ad-mid .ad-label{display:block;margin-bottom:10px;}
-.ad-mid-slot{background:linear-gradient(90deg,rgba(255,140,42,.05),rgba(30,60,140,.05));border-radius:8px;padding:20px;min-height:90px;display:flex;align-items:center;justify-content:center;font-size:13px;color:var(--text-muted);}
+.ad-mid-slot{background:linear-gradient(90deg,rgba(255,140,42,.05),rgba(30,60,140,.05));border-radius:8px;padding:20px;min-height:90px;display:flex;align-items:center;justify-content:center;font-size:13px;color:var(–text-muted);}
 
 /* SEARCH */
-.search-box{background:var(--dark3);border:1px solid rgba(0,200,150,.25);border-radius:16px;padding:28px;margin-bottom:24px;}
+.search-box{background:var(–dark3);border:1px solid rgba(0,200,150,.25);border-radius:16px;padding:28px;margin-bottom:24px;}
 .search-row{display:flex;gap:10px;flex-wrap:wrap;}
-.s-input{flex:1;min-width:200px;background:var(--dark2);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:13px 18px;color:var(--text);font-family:'Tajawal',sans-serif;font-size:15px;outline:none;direction:ltr;transition:border-color .2s;}
+.s-input{flex:1;min-width:200px;background:var(–dark2);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:13px 18px;color:var(–text);font-family:‘Tajawal’,sans-serif;font-size:15px;outline:none;direction:ltr;transition:border-color .2s;}
 .s-input:focus{border-color:rgba(0,200,150,.5);}
-.s-btn{background:linear-gradient(135deg,#00c896,#009e76);border:none;border-radius:10px;padding:13px 28px;color:white;font-family:'Tajawal',sans-serif;font-size:15px;font-weight:700;cursor:pointer;transition:opacity .2s;}
+.s-btn{background:linear-gradient(135deg,#00c896,#009e76);border:none;border-radius:10px;padding:13px 28px;color:white;font-family:‘Tajawal’,sans-serif;font-size:15px;font-weight:700;cursor:pointer;transition:opacity .2s;}
 .s-btn:hover{opacity:.85;}
 .chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px;align-items:center;}
-.chip{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:4px 14px;font-size:12px;color:var(--text-muted);cursor:pointer;font-family:'Tajawal',sans-serif;transition:all .2s;direction:ltr;}
-.chip:hover{background:rgba(0,200,150,.15);border-color:var(--green);color:var(--green);}
+.chip{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:4px 14px;font-size:12px;color:var(–text-muted);cursor:pointer;font-family:‘Tajawal’,sans-serif;transition:all .2s;direction:ltr;}
+.chip:hover{background:rgba(0,200,150,.15);border-color:var(–green);color:var(–green);}
 
 /* PRICE CARD */
-.price-card{background:var(--dark3);border:1px solid rgba(0,200,150,.2);border-radius:16px;padding:24px;margin-bottom:20px;display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:20px;}
-.p-symbol{font-size:24px;font-weight:900;color:var(--gold);}
+.price-card{background:var(–dark3);border:1px solid rgba(0,200,150,.2);border-radius:16px;padding:24px;margin-bottom:20px;display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:20px;}
+.p-symbol{font-size:24px;font-weight:900;color:var(–gold);}
 .p-badge{font-size:11px;padding:3px 10px;border-radius:20px;background:rgba(0,200,150,.15);color:#00c896;font-weight:600;}
-.p-name{font-size:13px;color:var(--text-muted);margin:6px 0 10px;}
-.p-price{font-size:36px;font-weight:900;color:var(--text);}
-.p-up{font-size:16px;font-weight:700;color:var(--green);}
-.p-down{font-size:16px;font-weight:700;color:var(--red);}
+.p-name{font-size:13px;color:var(–text-muted);margin:6px 0 10px;}
+.p-price{font-size:36px;font-weight:900;color:var(–text);}
+.p-up{font-size:16px;font-weight:700;color:var(–green);}
+.p-down{font-size:16px;font-weight:700;color:var(–red);}
 .p-stats{display:flex;flex-direction:column;gap:8px;min-width:170px;}
 .p-stat{display:flex;justify-content:space-between;gap:16px;font-size:12px;}
-.p-stat-label{color:var(--text-muted);}
+.p-stat-label{color:var(–text-muted);}
 
 /* CHART */
-.chart-card{background:var(--dark3);border:1px solid rgba(255,255,255,.07);border-radius:16px;overflow:hidden;margin-bottom:20px;}
+.chart-card{background:var(–dark3);border:1px solid rgba(255,255,255,.07);border-radius:16px;overflow:hidden;margin-bottom:20px;}
 .chart-hdr{padding:14px 20px;border-bottom:1px solid rgba(255,255,255,.06);display:flex;align-items:center;gap:8px;}
 
 /* ANALYSIS */
-.analysis-card{background:var(--dark3);border:1px solid rgba(255,140,42,.2);border-radius:16px;padding:24px;margin-bottom:20px;}
+.analysis-card{background:var(–dark3);border:1px solid rgba(255,140,42,.2);border-radius:16px;padding:24px;margin-bottom:20px;}
 .a-hdr{display:flex;align-items:center;gap:8px;margin-bottom:16px;}
-.a-title{font-size:15px;font-weight:700;color:var(--gold);}
-.a-body{font-size:14px;line-height:1.9;color:var(--text);}
+.a-title{font-size:15px;font-weight:700;color:var(–gold);}
+.a-body{font-size:14px;line-height:1.9;color:var(–text);}
 .a-foot{margin-top:16px;padding-top:16px;border-top:1px solid rgba(255,255,255,.06);display:flex;gap:10px;flex-wrap:wrap;}
 
 /* BADGES */
 .b-buy{background:rgba(0,200,150,.15);border:1px solid rgba(0,200,150,.3);color:#00c896;padding:6px 16px;border-radius:20px;font-size:13px;font-weight:700;}
 .b-sell{background:rgba(255,71,87,.15);border:1px solid rgba(255,71,87,.3);color:#ff4757;padding:6px 16px;border-radius:20px;font-size:13px;font-weight:700;}
-.b-hold{background:rgba(255,140,42,.15);border:1px solid rgba(255,140,42,.3);color:var(--gold);padding:6px 16px;border-radius:20px;font-size:13px;font-weight:700;}
+.b-hold{background:rgba(255,140,42,.15);border:1px solid rgba(255,140,42,.3);color:var(–gold);padding:6px 16px;border-radius:20px;font-size:13px;font-weight:700;}
 .b-rh{background:rgba(255,71,87,.1);border:1px solid rgba(255,71,87,.2);color:#ff4757;padding:6px 16px;border-radius:20px;font-size:12px;}
-.b-rm{background:rgba(255,140,42,.1);border:1px solid rgba(255,140,42,.2);color:var(--gold);padding:6px 16px;border-radius:20px;font-size:12px;}
+.b-rm{background:rgba(255,140,42,.1);border:1px solid rgba(255,140,42,.2);color:var(–gold);padding:6px 16px;border-radius:20px;font-size:12px;}
 .b-rl{background:rgba(0,200,150,.1);border:1px solid rgba(0,200,150,.2);color:#00c896;padding:6px 16px;border-radius:20px;font-size:12px;}
 
 /* ACTION BUTTONS */
 .action-btns{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:24px;}
-.btn-sahm{display:flex;align-items:center;gap:8px;background:linear-gradient(135deg,#1a3a6b,#0d2040);border:1px solid rgba(100,149,237,.4);border-radius:12px;padding:14px 22px;color:#6495ed;font-family:'Tajawal',sans-serif;font-size:14px;font-weight:700;cursor:pointer;text-decoration:none;transition:all .2s;}
+.btn-sahm{display:flex;align-items:center;gap:8px;background:linear-gradient(135deg,#1a3a6b,#0d2040);border:1px solid rgba(100,149,237,.4);border-radius:12px;padding:14px 22px;color:#6495ed;font-family:‘Tajawal’,sans-serif;font-size:14px;font-weight:700;cursor:pointer;text-decoration:none;transition:all .2s;}
 .btn-sahm:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(100,149,237,.2);}
-.btn-binance{display:flex;align-items:center;gap:8px;background:linear-gradient(135deg,#3d2800,#291a00);border:1px solid rgba(240,185,11,.3);border-radius:12px;padding:14px 22px;color:#f0b90b;font-family:'Tajawal',sans-serif;font-size:14px;font-weight:700;cursor:pointer;text-decoration:none;transition:all .2s;}
+.btn-binance{display:flex;align-items:center;gap:8px;background:linear-gradient(135deg,#3d2800,#291a00);border:1px solid rgba(240,185,11,.3);border-radius:12px;padding:14px 22px;color:#f0b90b;font-family:‘Tajawal’,sans-serif;font-size:14px;font-weight:700;cursor:pointer;text-decoration:none;transition:all .2s;}
 .btn-binance:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(240,185,11,.15);}
-.btn-tv-link{display:flex;align-items:center;gap:8px;background:linear-gradient(135deg,#1a2a4a,#0d1a30);border:1px solid rgba(42,110,245,.3);border-radius:12px;padding:14px 22px;color:#4a90ff;font-family:'Tajawal',sans-serif;font-size:14px;font-weight:700;cursor:pointer;text-decoration:none;transition:all .2s;}
+.btn-tv-link{display:flex;align-items:center;gap:8px;background:linear-gradient(135deg,#1a2a4a,#0d1a30);border:1px solid rgba(42,110,245,.3);border-radius:12px;padding:14px 22px;color:#4a90ff;font-family:‘Tajawal’,sans-serif;font-size:14px;font-weight:700;cursor:pointer;text-decoration:none;transition:all .2s;}
 .btn-tv-link:hover{transform:translateY(-2px);}
-.active-chip{background:rgba(255,140,42,.2)!important;border-color:var(--gold)!important;color:var(--gold)!important;}
+.active-chip{background:rgba(255,140,42,.2)!important;border-color:var(–gold)!important;color:var(–gold)!important;}
 .stock-list{display:flex;gap:8px;flex-wrap:wrap;}
-.stock-chip{background:var(--dark2);border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:8px 14px;font-size:13px;color:var(--text);cursor:pointer;font-family:'Tajawal',sans-serif;transition:all .2s;white-space:nowrap;}
-.stock-chip:hover{background:rgba(255,140,42,.15);border-color:var(--gold);color:var(--gold);}
+.stock-chip{background:var(–dark2);border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:8px 14px;font-size:13px;color:var(–text);cursor:pointer;font-family:‘Tajawal’,sans-serif;transition:all .2s;white-space:nowrap;}
+.stock-chip:hover{background:rgba(255,140,42,.15);border-color:var(–gold);color:var(–gold);}
 
 /* DISCLAIMER */
-.disclaimer{background:rgba(255,71,87,.06);border:1px solid rgba(255,71,87,.15);border-radius:10px;padding:12px 16px;font-size:12px;color:var(--text-muted);line-height:1.7;}
+.disclaimer{background:rgba(255,71,87,.06);border:1px solid rgba(255,71,87,.15);border-radius:10px;padding:12px 16px;font-size:12px;color:var(–text-muted);line-height:1.7;}
 
 /* LOADING */
 .ldots{display:inline-flex;gap:4px;align-items:center;}
-.ldots span{width:6px;height:6px;background:var(--text-muted);border-radius:50%;animation:dp 1.2s infinite;}
+.ldots span{width:6px;height:6px;background:var(–text-muted);border-radius:50%;animation:dp 1.2s infinite;}
 .ldots span:nth-child(2){animation-delay:.2s}.ldots span:nth-child(3){animation-delay:.4s}
 @keyframes dp{0%,80%,100%{transform:scale(.6);opacity:.4}40%{transform:scale(1);opacity:1}}
 
 /* EMPTY */
-.empty-state{text-align:center;padding:48px 24px;color:var(--text-muted);}
+.empty-state{text-align:center;padding:48px 24px;color:var(–text-muted);}
 .empty-state .emoji{font-size:48px;margin-bottom:16px;}
-.empty-state h3{font-size:16px;font-weight:600;margin-bottom:8px;color:var(--text);}
+.empty-state h3{font-size:16px;font-weight:600;margin-bottom:8px;color:var(–text);}
 
 /* FOOTER */
-footer{background:var(--dark2);border-top:1px solid rgba(255,255,255,.05);padding:28px 24px;text-align:center;position:relative;z-index:1;}
-.footer-logo{font-size:24px;font-weight:900;background:linear-gradient(135deg,var(--gold-light),var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:8px;}
+footer{background:var(–dark2);border-top:1px solid rgba(255,255,255,.05);padding:28px 24px;text-align:center;position:relative;z-index:1;}
+.footer-logo{font-size:24px;font-weight:900;background:linear-gradient(135deg,var(–gold-light),var(–gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:8px;}
 
 @media(max-width:600px){
-  .channels-grid,.news-sites-grid{grid-template-columns:repeat(2,1fr);}
-  .ad-slot{min-width:unset;padding:10px 20px;}
-  .p-price{font-size:28px;}
+.channels-grid,.news-sites-grid{grid-template-columns:repeat(2,1fr);}
+.ad-slot{min-width:unset;padding:10px 20px;}
+.p-price{font-size:28px;}
 }
 </style>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5168507256678257"
+     crossorigin="anonymous"></script>
+
 </head>
 <body>
 
@@ -245,6 +250,7 @@ footer{background:var(--dark2);border-top:1px solid rgba(255,255,255,.05);paddin
 <div class="main">
 
   <!-- ALL -->
+
   <div id="sec-all" class="section active">
     <div class="section-title">📰 قنوات الأخبار العربية</div>
     <div class="channels-grid" id="grid-news"></div>
@@ -266,12 +272,14 @@ footer{background:var(--dark2);border-top:1px solid rgba(255,255,255,.05);paddin
   <div id="sec-intl" class="section"><div class="section-title">🌍 قنوات دولية</div><div class="channels-grid" id="grid-intl2"></div></div>
 
   <!-- NEWS SITES SECTION -->
+
   <div id="sec-newssites" class="section">
     <div class="section-title">📑 صحف ومواقع التداول الموثوقة</div>
     <div class="news-sites-grid" id="grid-newssites"></div>
   </div>
 
   <!-- SEARCH SECTION -->
+
   <div id="sec-search" class="section">
     <div class="section-title">🔍 بحث الأسهم والعملات المشفرة</div>
     <div class="search-box">
@@ -336,338 +344,355 @@ footer{background:var(--dark2);border-top:1px solid rgba(255,255,255,.05);paddin
       </div>
     </div>
 
-    <div id="srResults" style="display:none;">
-      <div class="price-card">
-        <div>
-          <div style="display:flex;align-items:center;gap:10px;margin-bottom:4px;">
-            <span id="pSym" class="p-symbol">—</span>
-            <span id="pBadge" class="p-badge">—</span>
-          </div>
-          <div id="pName" class="p-name">—</div>
-          <div style="display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;">
-            <span id="pPrice" class="p-price">—</span>
-            <span id="pChange">—</span>
-          </div>
-        </div>
-        <div class="p-stats">
-          <div class="p-stat"><span class="p-stat-label">أعلى اليوم</span><span id="pH" style="color:var(--green);font-weight:600;font-size:12px;">—</span></div>
-          <div class="p-stat"><span class="p-stat-label">أدنى اليوم</span><span id="pL" style="color:var(--red);font-weight:600;font-size:12px;">—</span></div>
-          <div class="p-stat"><span class="p-stat-label">حجم التداول</span><span id="pV" style="color:var(--text);font-weight:600;font-size:12px;">—</span></div>
-          <div class="p-stat"><span class="p-stat-label">القيمة السوقية</span><span id="pCap" style="color:var(--text);font-weight:600;font-size:12px;">—</span></div>
-        </div>
+```
+<div id="srResults" style="display:none;">
+  <div class="price-card">
+    <div>
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:4px;">
+        <span id="pSym" class="p-symbol">—</span>
+        <span id="pBadge" class="p-badge">—</span>
       </div>
-
-      <div class="chart-card">
-        <div class="chart-hdr">
-          <span style="font-size:14px;font-weight:700;">📊 الرسم البياني التفاعلي</span>
-          <span style="font-size:11px;color:var(--text-muted);margin-right:auto;">مدعوم من TradingView</span>
-        </div>
-        <div id="tvChart" style="height:450px;"></div>
-      </div>
-
-      <div class="analysis-card">
-        <div class="a-hdr">
-          <span style="font-size:18px;">🤖</span>
-          <span class="a-title">تحليل ذكي مختصر</span>
-          <span style="font-size:11px;color:var(--text-muted);margin-right:auto;">بالذكاء الاصطناعي</span>
-        </div>
-        <div id="aText" class="a-body"><span style="color:var(--text-muted);"><span class="ldots"><span></span><span></span><span></span></span> جاري التحليل...</span></div>
-        <div class="a-foot"><span id="aSig" style="display:none;"></span><span id="aRisk" style="display:none;"></span></div>
-      </div>
-
-      <div id="aBtns" class="action-btns"></div>
-
-      <!-- AI SUGGESTION -->
-      <div id="aiSuggestion" style="display:none;margin-bottom:20px;background:linear-gradient(135deg,rgba(255,140,42,.1),rgba(255,140,42,.03));border:1px solid rgba(255,140,42,.25);border-radius:14px;padding:20px;">
-        <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px;">
-          <span style="font-size:18px;">🤖</span>
-          <span style="font-size:14px;font-weight:700;color:var(--gold);">اقتراح البوت</span>
-        </div>
-        <div id="aiSugText" style="font-size:13px;color:var(--text);line-height:1.8;"></div>
-        <div id="aiSugChips" style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px;"></div>
-      </div>
-
-      <div class="disclaimer">⚠️ <strong style="color:var(--red);">تنبيه مهم:</strong> هذا التحليل لأغراض معلوماتية فقط وليس توصية استثمارية. التداول ينطوي على مخاطر عالية. استشر مستشاراً مالياً مرخصاً قبل اتخاذ أي قرار.</div>
-
-      <!-- INTEGRATED CALCULATOR -->
-      <div id="inlineCalc" style="margin-top:20px;background:var(--dark3);border:1px solid rgba(255,140,42,.25);border-radius:18px;padding:28px;">
-        <div style="display:flex;align-items:center;gap:10px;margin-bottom:20px;">
-          <span style="font-size:22px;">&#x1F9EE;</span>
-          <div>
-            <div style="font-size:15px;font-weight:700;color:var(--gold);">&#x062D;&#x0627;&#x0633;&#x0628;&#x0629; &#x0627;&#x0644;&#x0634;&#x0631;&#x0627;&#x0621;</div>
-            <div id="calcSymLabel" style="font-size:12px;color:var(--text-muted);">&#x0627;&#x0628;&#x062D;&#x062B; &#x0639;&#x0646; &#x0633;&#x0647;&#x0645; &#x0623;&#x0648;&#x0644;&#x0627;&#x064B; &#x062B;&#x0645; &#x0623;&#x062F;&#x062E;&#x0644; &#x0645;&#x0628;&#x0644;&#x063A;&#x0643;</div>
-          </div>
-        </div>
-        <div style="display:grid;gap:12px;margin-bottom:16px;">
-          <div>
-            <label style="font-size:12px;color:var(--text-muted);display:block;margin-bottom:7px;">&#x1F4B0; &#x0627;&#x0644;&#x0645;&#x0628;&#x0644;&#x063A; &#x0627;&#x0644;&#x0645;&#x062A;&#x0627;&#x062D;</label>
-            <div style="display:flex;gap:8px;">
-              <input id="iCalcAmount" type="number" placeholder="&#x0623;&#x062F;&#x062E;&#x0644; &#x0627;&#x0644;&#x0645;&#x0628;&#x0644;&#x063A;..." min="0"
-                style="flex:1;background:var(--dark2);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:12px 16px;color:var(--text);font-family:Tajawal,sans-serif;font-size:16px;font-weight:700;outline:none;direction:ltr;"
-                oninput="iCalc()" />
-              <select id="iCalcCur" onchange="iCalc()"
-                style="background:var(--dark2);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:12px 14px;color:var(--text);font-family:Tajawal,sans-serif;font-size:14px;outline:none;cursor:pointer;">
-                <option value="SAR">&#x0631;&#x064A;&#x0627;&#x0644; &#x1F1F8;&#x1F1E6;</option>
-                <option value="USD">&#x062F;&#x0648;&#x0644;&#x0627;&#x0631; &#x1F1FA;&#x1F1F8;</option>
-              </select>
-            </div>
-          </div>
-          <div>
-            <label style="font-size:12px;color:var(--text-muted);display:block;margin-bottom:7px;">&#x1F4B8; &#x0627;&#x0644;&#x0639;&#x0645;&#x0648;&#x0644;&#x0629; %</label>
-            <div style="display:flex;gap:8px;align-items:center;">
-              <input id="iCalcFee" type="number" value="0.15" min="0" max="100" step="0.01"
-                style="width:120px;background:var(--dark2);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:12px 16px;color:var(--text);font-family:Tajawal,sans-serif;font-size:15px;font-weight:700;outline:none;direction:ltr;"
-                oninput="iCalc()" />
-              <span style="font-size:13px;color:var(--text-muted);">% &#x0645;&#x0646; &#x0627;&#x0644;&#x0645;&#x0628;&#x0644;&#x063A;</span>
-            </div>
-          </div>
-          <div id="manualPriceRow">
-            <label style="font-size:12px;color:var(--text-muted);display:block;margin-bottom:7px;">&#x1F4CC; &#x0633;&#x0639;&#x0631; &#x0627;&#x0644;&#x0633;&#x0647;&#x0645; / &#x0627;&#x0644;&#x0639;&#x0645;&#x0644;&#x0629; <span style="color:rgba(255,140,42,.7);font-size:11px;">(&#x0625;&#x0630;&#x0627; &#x0645;&#x0627; &#x0628;&#x062D;&#x062B;&#x062A; &#x0639;&#x0646; &#x0633;&#x0647;&#x0645;)</span></label>
-            <div style="display:flex;gap:8px;">
-              <input id="iManualPrice" type="number" placeholder="&#x0645;&#x062B;&#x0627;&#x0644;: 28.50" min="0" step="0.01"
-                style="flex:1;background:var(--dark2);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:12px 16px;color:var(--text);font-family:Tajawal,sans-serif;font-size:15px;font-weight:700;outline:none;direction:ltr;"
-                oninput="iCalc()" />
-              <select id="iManualPriceCur" onchange="iCurrentPriceCur=this.value;iCalc()"
-                style="background:var(--dark2);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:12px 14px;color:var(--text);font-family:Tajawal,sans-serif;font-size:14px;outline:none;cursor:pointer;">
-                <option value="USD">&#x062F;&#x0648;&#x0644;&#x0627;&#x0631; &#x1F1FA;&#x1F1F8;</option>
-                <option value="SAR">&#x0631;&#x064A;&#x0627;&#x0644; &#x1F1F8;&#x1F1E6;</option>
-              </select>
-            </div>
-            <div style="margin-top:8px;display:flex;align-items:center;gap:6px;background:rgba(255,140,42,.07);border:1px solid rgba(255,140,42,.15);border-radius:8px;padding:8px 12px;">
-              <span style="font-size:14px;">&#x1F4A1;</span>
-              <span style="font-size:12px;color:var(--text-muted);line-height:1.5;">
-                &#x0623;&#x062F;&#x062E;&#x0644; &#x0633;&#x0639;&#x0631; &#x0627;&#x0644;&#x0633;&#x0647;&#x0645; &#x064A;&#x062F;&#x0648;&#x064A;&#x0627;&#x064B; &#x0644;&#x0648; &#x0645;&#x0627; &#x0628;&#x062D;&#x062B;&#x062A; &#x0639;&#x0646; &#x0633;&#x0647;&#x0645; &#x2014; &#x0639;&#x0646;&#x062F; &#x0627;&#x0644;&#x0628;&#x062D;&#x062B; &#x064A;&#x062A;&#x0639;&#x0628;&#x0623; &#x0627;&#x0644;&#x0633;&#x0639;&#x0631; &#x062A;&#x0644;&#x0642;&#x0627;&#x0626;&#x064A;&#x0627;&#x064B;
-                <br><strong style="color:var(--gold);">&#x1F50D; &#x0627;&#x0644;&#x0628;&#x062D;&#x062B;:</strong> AAPL | TSLA | 2222.SR | BTCUSDT
-              </span>
-            </div>
-          </div>
-        </div>
-        <div style="margin-bottom:16px;">
-          <p style="font-size:12px;color:var(--text-muted);margin-bottom:8px;">&#x0645;&#x0628;&#x0627;&#x0644;&#x063A; &#x0633;&#x0631;&#x064A;&#x0639;&#x0629;:</p>
-          <div style="display:flex;gap:8px;flex-wrap:wrap;">
-            <button class="chip" onclick="iSetAmount(1000)">1,000 &#x0631;.&#x0633;</button>
-            <button class="chip" onclick="iSetAmount(5000)">5,000 &#x0631;.&#x0633;</button>
-            <button class="chip" onclick="iSetAmount(10000)">10,000 &#x0631;.&#x0633;</button>
-            <button class="chip" onclick="iSetAmount(25000)">25,000 &#x0631;.&#x0633;</button>
-            <button class="chip" onclick="iSetAmount(50000)">50,000 &#x0631;.&#x0633;</button>
-          </div>
-        </div>
-        <div id="iCalcResult" style="display:none;">
-          <div style="background:linear-gradient(135deg,rgba(0,200,150,.1),rgba(0,200,150,.03));border:1px solid rgba(0,200,150,.2);border-radius:14px;padding:20px;text-align:center;margin-bottom:14px;">
-            <div style="font-size:12px;color:var(--text-muted);margin-bottom:6px;">&#x0639;&#x062F;&#x062F; &#x0627;&#x0644;&#x0623;&#x0633;&#x0647;&#x0645; / &#x0627;&#x0644;&#x0648;&#x062D;&#x062F;&#x0627;&#x062A; &#x0627;&#x0644;&#x0644;&#x064A; &#x062A;&#x0642;&#x062F;&#x0631; &#x062A;&#x0634;&#x062A;&#x0631;&#x064A;&#x0647;&#x0627;</div>
-            <div id="iCalcShares" style="font-size:60px;font-weight:900;color:var(--green);line-height:1.1;">0</div>
-            <div id="iCalcSharesLabel" style="font-size:13px;color:var(--text-muted);margin-top:4px;">&#x0633;&#x0647;&#x0645; / &#x0648;&#x062D;&#x062F;&#x0629;</div>
-          </div>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px;">
-            <div style="background:var(--dark2);border-radius:12px;padding:14px;text-align:center;">
-              <div style="font-size:11px;color:var(--text-muted);margin-bottom:5px;">&#x1F4B0; &#x0627;&#x0644;&#x0645;&#x0633;&#x062A;&#x062B;&#x0645;&#x0631; &#x0641;&#x0639;&#x0644;&#x064A;&#x0627;&#x064B;</div>
-              <div id="iCalcInvested" style="font-size:16px;font-weight:700;color:var(--text);">&#x2014;</div>
-            </div>
-            <div style="background:var(--dark2);border-radius:12px;padding:14px;text-align:center;">
-              <div style="font-size:11px;color:var(--text-muted);margin-bottom:5px;">&#x1F4B8; &#x0627;&#x0644;&#x0639;&#x0645;&#x0648;&#x0644;&#x0629;</div>
-              <div id="iCalcFeeAmt" style="font-size:16px;font-weight:700;color:var(--red);">&#x2014;</div>
-            </div>
-            <div style="background:var(--dark2);border-radius:12px;padding:14px;text-align:center;">
-              <div style="font-size:11px;color:var(--text-muted);margin-bottom:5px;">&#x1F4B5; &#x0627;&#x0644;&#x0645;&#x062A;&#x0628;&#x0642;&#x064A;</div>
-              <div id="iCalcRemain" style="font-size:16px;font-weight:700;color:var(--gold);">&#x2014;</div>
-            </div>
-            <div style="background:var(--dark2);border-radius:12px;padding:14px;text-align:center;">
-              <div style="font-size:11px;color:var(--text-muted);margin-bottom:5px;">&#x1F4CA; &#x0645;&#x062A;&#x0648;&#x0633;&#x0637; &#x0627;&#x0644;&#x0633;&#x0639;&#x0631;</div>
-              <div id="iCalcAvg" style="font-size:16px;font-weight:700;color:var(--text);">&#x2014;</div>
-            </div>
-          </div>
-          <div style="background:rgba(255,140,42,.07);border:1px solid rgba(255,140,42,.15);border-radius:12px;padding:16px;">
-            <div style="font-size:12px;color:var(--text-muted);margin-bottom:10px;">&#x1F4C8; &#x0633;&#x0639;&#x0631; &#x0627;&#x0644;&#x0628;&#x064A;&#x0639; &#x0644;&#x062A;&#x062D;&#x0642;&#x064A;&#x0642; &#x0631;&#x0628;&#x062D;</div>
-            <div style="display:flex;gap:16px;flex-wrap:wrap;">
-              <div><span style="font-size:12px;color:var(--text-muted);">+10%: </span><span id="iT10" style="font-size:14px;font-weight:700;color:var(--green);">&#x2014;</span></div>
-              <div><span style="font-size:12px;color:var(--text-muted);">+20%: </span><span id="iT20" style="font-size:14px;font-weight:700;color:var(--green);">&#x2014;</span></div>
-              <div><span style="font-size:12px;color:var(--text-muted);">+50%: </span><span id="iT50" style="font-size:14px;font-weight:700;color:var(--green);">&#x2014;</span></div>
-              <div><span style="font-size:12px;color:var(--text-muted);">+100%: </span><span id="iT100" style="font-size:14px;font-weight:700;color:var(--green);">&#x2014;</span></div>
-            </div>
-          </div>
-
-        <!-- PROFIT / LOSS SIMULATOR -->
-        <div id="plSection" style="margin-top:14px;background:var(--dark2);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:20px;">
-          <div style="display:flex;align-items:center;gap:8px;margin-bottom:16px;">
-            <span style="font-size:16px;">🎯</span>
-            <span style="font-size:14px;font-weight:700;color:var(--text);">توقع الربح والخسارة</span>
-          </div>
-          <div>
-            <label style="font-size:12px;color:var(--text-muted);display:block;margin-bottom:7px;">📌 سعر البيع المستهدف</label>
-            <div style="display:flex;gap:8px;align-items:center;">
-              <input id="iSellPrice" type="number" placeholder="أدخل سعر البيع..." min="0" step="0.01"
-                style="flex:1;background:var(--dark3);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:12px 16px;color:var(--text);font-family:Tajawal,sans-serif;font-size:15px;font-weight:700;outline:none;direction:ltr;"
-                oninput="calcPL()" />
-              <span id="iSellCurLabel" style="font-size:13px;color:var(--text-muted);white-space:nowrap;">USD</span>
-            </div>
-          </div>
-
-          <div id="plResult" style="display:none;margin-top:16px;">
-            <!-- Big PL number -->
-            <div id="plCard" style="border-radius:14px;padding:20px;text-align:center;margin-bottom:14px;">
-              <div style="font-size:12px;margin-bottom:6px;opacity:.8;">صافي الربح / الخسارة</div>
-              <div id="plAmount" style="font-size:48px;font-weight:900;line-height:1.1;">—</div>
-              <div id="plPct" style="font-size:18px;font-weight:700;margin-top:4px;">—</div>
-            </div>
-            <!-- Details grid -->
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
-              <div style="background:var(--dark3);border-radius:12px;padding:14px;text-align:center;">
-                <div style="font-size:11px;color:var(--text-muted);margin-bottom:5px;">💰 تكلفة الشراء الكاملة</div>
-                <div id="plBuyCost" style="font-size:15px;font-weight:700;color:var(--text);">—</div>
-              </div>
-              <div style="background:var(--dark3);border-radius:12px;padding:14px;text-align:center;">
-                <div style="font-size:11px;color:var(--text-muted);margin-bottom:5px;">💵 عائد البيع</div>
-                <div id="plSellReturn" style="font-size:15px;font-weight:700;color:var(--text);">—</div>
-              </div>
-              <div style="background:var(--dark3);border-radius:12px;padding:14px;text-align:center;">
-                <div style="font-size:11px;color:var(--text-muted);margin-bottom:5px;">📈 نسبة التغير</div>
-                <div id="plChangePct" style="font-size:15px;font-weight:700;">—</div>
-              </div>
-              <div style="background:var(--dark3);border-radius:12px;padding:14px;text-align:center;">
-                <div style="font-size:11px;color:var(--text-muted);margin-bottom:5px;">⚖️ نقطة التعادل</div>
-                <div id="plBreakeven" style="font-size:15px;font-weight:700;color:var(--gold);">—</div>
-              </div>
-            </div>
-          </div>
-
-          <div id="plEmpty" style="text-align:center;padding:14px;color:var(--text-muted);font-size:13px;">
-            أدخل سعر البيع المستهدف لحساب الربح أو الخسارة
-          </div>
-        </div>
-        </div>
-        <div id="iCalcEmpty" style="text-align:center;padding:16px;color:var(--text-muted);font-size:13px;">
-          &#x2B06;&#xFE0F; &#x0627;&#x0628;&#x062D;&#x062B; &#x0639;&#x0646; &#x0633;&#x0647;&#x0645; &#x0623;&#x0648; &#x0639;&#x0645;&#x0644;&#x0629; &#x0623;&#x0648;&#x0644;&#x0627;&#x064B; &#x062B;&#x0645; &#x0623;&#x062F;&#x062E;&#x0644; &#x0645;&#x0628;&#x0644;&#x063A;&#x0643;
-        </div>
+      <div id="pName" class="p-name">—</div>
+      <div style="display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;">
+        <span id="pPrice" class="p-price">—</span>
+        <span id="pChange">—</span>
       </div>
     </div>
-
-    <div id="srEmpty" class="empty-state">
-      <div class="emoji">📊</div>
-      <h3>ابحث عن أي سهم أو عملة مشفرة</h3>
-      <p>اكتب الرمز أعلاه للحصول على السعر الحي، الرسم البياني، والتحليل الذكي</p>
+    <div class="p-stats">
+      <div class="p-stat"><span class="p-stat-label">أعلى اليوم</span><span id="pH" style="color:var(--green);font-weight:600;font-size:12px;">—</span></div>
+      <div class="p-stat"><span class="p-stat-label">أدنى اليوم</span><span id="pL" style="color:var(--red);font-weight:600;font-size:12px;">—</span></div>
+      <div class="p-stat"><span class="p-stat-label">حجم التداول</span><span id="pV" style="color:var(--text);font-weight:600;font-size:12px;">—</span></div>
+      <div class="p-stat"><span class="p-stat-label">القيمة السوقية</span><span id="pCap" style="color:var(--text);font-weight:600;font-size:12px;">—</span></div>
     </div>
   </div>
 
+  <div class="chart-card">
+    <div class="chart-hdr">
+      <span style="font-size:14px;font-weight:700;">📊 الرسم البياني التفاعلي</span>
+      <span style="font-size:11px;color:var(--text-muted);margin-right:auto;">مدعوم من TradingView</span>
+    </div>
+    <div id="tvChart" style="height:450px;"></div>
+  </div>
+
+  <div class="analysis-card">
+    <div class="a-hdr">
+      <span style="font-size:18px;">🤖</span>
+      <span class="a-title">تحليل ذكي مختصر</span>
+      <span style="font-size:11px;color:var(--text-muted);margin-right:auto;">بالذكاء الاصطناعي</span>
+    </div>
+    <div id="aText" class="a-body"><span style="color:var(--text-muted);"><span class="ldots"><span></span><span></span><span></span></span> جاري التحليل...</span></div>
+    <div class="a-foot"><span id="aSig" style="display:none;"></span><span id="aRisk" style="display:none;"></span></div>
+  </div>
+
+  <div id="aBtns" class="action-btns"></div>
+
+  <!-- AI SUGGESTION -->
+  <div id="aiSuggestion" style="display:none;margin-bottom:20px;background:linear-gradient(135deg,rgba(255,140,42,.1),rgba(255,140,42,.03));border:1px solid rgba(255,140,42,.25);border-radius:14px;padding:20px;">
+    <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px;">
+      <span style="font-size:18px;">🤖</span>
+      <span style="font-size:14px;font-weight:700;color:var(--gold);">اقتراح البوت</span>
+    </div>
+    <div id="aiSugText" style="font-size:13px;color:var(--text);line-height:1.8;"></div>
+    <div id="aiSugChips" style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px;"></div>
+  </div>
+
+  <div class="disclaimer">⚠️ <strong style="color:var(--red);">تنبيه مهم:</strong> هذا التحليل لأغراض معلوماتية فقط وليس توصية استثمارية. التداول ينطوي على مخاطر عالية. استشر مستشاراً مالياً مرخصاً قبل اتخاذ أي قرار.</div>
+
+  <!-- INTEGRATED CALCULATOR -->
+  <div id="inlineCalc" style="margin-top:20px;background:var(--dark3);border:1px solid rgba(255,140,42,.25);border-radius:18px;padding:28px;">
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:20px;">
+      <span style="font-size:22px;">&#x1F9EE;</span>
+      <div>
+        <div style="font-size:15px;font-weight:700;color:var(--gold);">&#x062D;&#x0627;&#x0633;&#x0628;&#x0629; &#x0627;&#x0644;&#x0634;&#x0631;&#x0627;&#x0621;</div>
+        <div id="calcSymLabel" style="font-size:12px;color:var(--text-muted);">&#x0627;&#x0628;&#x062D;&#x062B; &#x0639;&#x0646; &#x0633;&#x0647;&#x0645; &#x0623;&#x0648;&#x0644;&#x0627;&#x064B; &#x062B;&#x0645; &#x0623;&#x062F;&#x062E;&#x0644; &#x0645;&#x0628;&#x0644;&#x063A;&#x0643;</div>
+      </div>
+    </div>
+    <div style="display:grid;gap:12px;margin-bottom:16px;">
+      <div>
+        <label style="font-size:12px;color:var(--text-muted);display:block;margin-bottom:7px;">&#x1F4B0; &#x0627;&#x0644;&#x0645;&#x0628;&#x0644;&#x063A; &#x0627;&#x0644;&#x0645;&#x062A;&#x0627;&#x062D;</label>
+        <div style="display:flex;gap:8px;">
+          <input id="iCalcAmount" type="number" inputmode="decimal" placeholder="&#x0623;&#x062F;&#x062E;&#x0644; &#x0627;&#x0644;&#x0645;&#x0628;&#x0644;&#x063A;..." min="0"
+            style="flex:1;background:var(--dark2);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:12px 16px;color:var(--text);font-family:Tajawal,sans-serif;font-size:16px;font-weight:700;outline:none;direction:ltr;"
+            oninput="iCalc()" onchange="iCalc()" />
+          <select id="iCalcCur" onchange="iCalc()"
+            style="background:var(--dark2);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:12px 14px;color:var(--text);font-family:Tajawal,sans-serif;font-size:14px;outline:none;cursor:pointer;">
+            <option value="SAR">&#x0631;&#x064A;&#x0627;&#x0644; &#x1F1F8;&#x1F1E6;</option>
+            <option value="USD">&#x062F;&#x0648;&#x0644;&#x0627;&#x0631; &#x1F1FA;&#x1F1F8;</option>
+          </select>
+        </div>
+      </div>
+      <div>
+        <label style="font-size:12px;color:var(--text-muted);display:block;margin-bottom:7px;">&#x1F4B8; &#x0627;&#x0644;&#x0639;&#x0645;&#x0648;&#x0644;&#x0629; %</label>
+        <div style="display:flex;gap:8px;align-items:center;">
+          <input id="iCalcFee" type="number" inputmode="decimal" value="0.15" min="0" max="100" step="0.01"
+            style="width:120px;background:var(--dark2);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:12px 16px;color:var(--text);font-family:Tajawal,sans-serif;font-size:15px;font-weight:700;outline:none;direction:ltr;"
+            oninput="iCalc()" />
+          <span style="font-size:13px;color:var(--text-muted);">% &#x0645;&#x0646; &#x0627;&#x0644;&#x0645;&#x0628;&#x0644;&#x063A;</span>
+        </div>
+      </div>
+      <div id="manualPriceRow">
+        <label style="font-size:12px;color:var(--text-muted);display:block;margin-bottom:7px;">&#x1F4CC; &#x0633;&#x0639;&#x0631; &#x0627;&#x0644;&#x0633;&#x0647;&#x0645; / &#x0627;&#x0644;&#x0639;&#x0645;&#x0644;&#x0629; <span style="color:rgba(255,140,42,.7);font-size:11px;">(&#x0625;&#x0630;&#x0627; &#x0645;&#x0627; &#x0628;&#x062D;&#x062B;&#x062A; &#x0639;&#x0646; &#x0633;&#x0647;&#x0645;)</span></label>
+        <div style="display:flex;gap:8px;">
+          <input id="iManualPrice" type="number" inputmode="decimal" placeholder="&#x0645;&#x062B;&#x0627;&#x0644;: 28.50" min="0" step="0.01"
+            style="flex:1;background:var(--dark2);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:12px 16px;color:var(--text);font-family:Tajawal,sans-serif;font-size:15px;font-weight:700;outline:none;direction:ltr;"
+            oninput="iCalc()" onchange="iCalc()" />
+          <select id="iManualPriceCur" onchange="iCurrentPriceCur=this.value;iCalc()"
+            style="background:var(--dark2);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:12px 14px;color:var(--text);font-family:Tajawal,sans-serif;font-size:14px;outline:none;cursor:pointer;">
+            <option value="USD">&#x062F;&#x0648;&#x0644;&#x0627;&#x0631; &#x1F1FA;&#x1F1F8;</option>
+            <option value="SAR">&#x0631;&#x064A;&#x0627;&#x0644; &#x1F1F8;&#x1F1E6;</option>
+          </select>
+        </div>
+        <div style="margin-top:8px;display:flex;align-items:center;gap:6px;background:rgba(255,140,42,.07);border:1px solid rgba(255,140,42,.15);border-radius:8px;padding:8px 12px;">
+          <span style="font-size:14px;">&#x1F4A1;</span>
+          <span style="font-size:12px;color:var(--text-muted);line-height:1.5;">
+            &#x0623;&#x062F;&#x062E;&#x0644; &#x0633;&#x0639;&#x0631; &#x0627;&#x0644;&#x0633;&#x0647;&#x0645; &#x064A;&#x062F;&#x0648;&#x064A;&#x0627;&#x064B; &#x0644;&#x0648; &#x0645;&#x0627; &#x0628;&#x062D;&#x062B;&#x062A; &#x0639;&#x0646; &#x0633;&#x0647;&#x0645; &#x2014; &#x0639;&#x0646;&#x062F; &#x0627;&#x0644;&#x0628;&#x062D;&#x062B; &#x064A;&#x062A;&#x0639;&#x0628;&#x0623; &#x0627;&#x0644;&#x0633;&#x0639;&#x0631; &#x062A;&#x0644;&#x0642;&#x0627;&#x0626;&#x064A;&#x0627;&#x064B;
+            <br><strong style="color:var(--gold);">&#x1F50D; &#x0627;&#x0644;&#x0628;&#x062D;&#x062B;:</strong> AAPL | TSLA | 2222.SR | BTCUSDT
+          </span>
+        </div>
+        <div style="margin-top:10px;">
+          <label style="font-size:12px;color:var(--text-muted);display:block;margin-bottom:7px;">&#x1F4CC; &#x0646;&#x0648;&#x0639; &#x0627;&#x0644;&#x0623;&#x0635;&#x0644;</label>
+          <select id="iAssetType" onchange="iCalc()"
+            style="width:100%;background:var(--dark2);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:12px 16px;color:var(--text);font-family:Tajawal,sans-serif;font-size:14px;outline:none;cursor:pointer;">
+            <option value="auto">&#x1F916; تلقائي (حسب السعر)</option>
+            <option value="crypto">&#x20BF; عملة مشفرة (يقبل كسور)</option>
+            <option value="stock">&#x1F4C8; سهم (أعداد صحيحة فقط)</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div style="margin-bottom:16px;">
+      <p style="font-size:12px;color:var(--text-muted);margin-bottom:8px;">&#x0645;&#x0628;&#x0627;&#x0644;&#x063A; &#x0633;&#x0631;&#x064A;&#x0639;&#x0629;:</p>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;">
+        <button class="chip" onclick="iSetAmount(1000)">1,000 &#x0631;.&#x0633;</button>
+        <button class="chip" onclick="iSetAmount(5000)">5,000 &#x0631;.&#x0633;</button>
+        <button class="chip" onclick="iSetAmount(10000)">10,000 &#x0631;.&#x0633;</button>
+        <button class="chip" onclick="iSetAmount(25000)">25,000 &#x0631;.&#x0633;</button>
+        <button class="chip" onclick="iSetAmount(50000)">50,000 &#x0631;.&#x0633;</button>
+      </div>
+    </div>
+    <div id="iCalcResult" style="display:none;">
+      <div style="background:linear-gradient(135deg,rgba(0,200,150,.1),rgba(0,200,150,.03));border:1px solid rgba(0,200,150,.2);border-radius:14px;padding:20px;text-align:center;margin-bottom:14px;">
+        <div style="font-size:12px;color:var(--text-muted);margin-bottom:6px;">&#x0639;&#x062F;&#x062F; &#x0627;&#x0644;&#x0623;&#x0633;&#x0647;&#x0645; / &#x0627;&#x0644;&#x0648;&#x062D;&#x062F;&#x0627;&#x062A; &#x0627;&#x0644;&#x0644;&#x064A; &#x062A;&#x0642;&#x062F;&#x0631; &#x062A;&#x0634;&#x062A;&#x0631;&#x064A;&#x0647;&#x0627;</div>
+        <div id="iCalcShares" style="font-size:60px;font-weight:900;color:var(--green);line-height:1.1;">0</div>
+        <div id="iCalcSharesLabel" style="font-size:13px;color:var(--text-muted);margin-top:4px;">&#x0633;&#x0647;&#x0645; / &#x0648;&#x062D;&#x062F;&#x0629;</div>
+        <div id="iCalcSharesValue" style="display:none;font-size:14px;color:var(--gold);font-weight:600;margin-top:6px;"></div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px;">
+        <div style="background:var(--dark2);border-radius:12px;padding:14px;text-align:center;">
+          <div style="font-size:11px;color:var(--text-muted);margin-bottom:5px;">&#x1F4B0; &#x0627;&#x0644;&#x0645;&#x0633;&#x062A;&#x062B;&#x0645;&#x0631; &#x0641;&#x0639;&#x0644;&#x064A;&#x0627;&#x064B;</div>
+          <div id="iCalcInvested" style="font-size:16px;font-weight:700;color:var(--text);">&#x2014;</div>
+        </div>
+        <div style="background:var(--dark2);border-radius:12px;padding:14px;text-align:center;">
+          <div style="font-size:11px;color:var(--text-muted);margin-bottom:5px;">&#x1F4B8; &#x0627;&#x0644;&#x0639;&#x0645;&#x0648;&#x0644;&#x0629;</div>
+          <div id="iCalcFeeAmt" style="font-size:16px;font-weight:700;color:var(--red);">&#x2014;</div>
+        </div>
+        <div style="background:var(--dark2);border-radius:12px;padding:14px;text-align:center;">
+          <div style="font-size:11px;color:var(--text-muted);margin-bottom:5px;">&#x1F4B5; &#x0627;&#x0644;&#x0645;&#x062A;&#x0628;&#x0642;&#x064A;</div>
+          <div id="iCalcRemain" style="font-size:16px;font-weight:700;color:var(--gold);">&#x2014;</div>
+        </div>
+        <div style="background:var(--dark2);border-radius:12px;padding:14px;text-align:center;">
+          <div style="font-size:11px;color:var(--text-muted);margin-bottom:5px;">&#x1F4CA; &#x0645;&#x062A;&#x0648;&#x0633;&#x0637; &#x0627;&#x0644;&#x0633;&#x0639;&#x0631;</div>
+          <div id="iCalcAvg" style="font-size:16px;font-weight:700;color:var(--text);">&#x2014;</div>
+        </div>
+      </div>
+      <div style="background:rgba(255,140,42,.07);border:1px solid rgba(255,140,42,.15);border-radius:12px;padding:16px;">
+        <div style="font-size:12px;color:var(--text-muted);margin-bottom:10px;">&#x1F4C8; &#x0633;&#x0639;&#x0631; &#x0627;&#x0644;&#x0628;&#x064A;&#x0639; &#x0644;&#x062A;&#x062D;&#x0642;&#x064A;&#x0642; &#x0631;&#x0628;&#x062D;</div>
+        <div style="display:flex;gap:16px;flex-wrap:wrap;">
+          <div><span style="font-size:12px;color:var(--text-muted);">+10%: </span><span id="iT10" style="font-size:14px;font-weight:700;color:var(--green);">&#x2014;</span></div>
+          <div><span style="font-size:12px;color:var(--text-muted);">+20%: </span><span id="iT20" style="font-size:14px;font-weight:700;color:var(--green);">&#x2014;</span></div>
+          <div><span style="font-size:12px;color:var(--text-muted);">+50%: </span><span id="iT50" style="font-size:14px;font-weight:700;color:var(--green);">&#x2014;</span></div>
+          <div><span style="font-size:12px;color:var(--text-muted);">+100%: </span><span id="iT100" style="font-size:14px;font-weight:700;color:var(--green);">&#x2014;</span></div>
+        </div>
+      </div>
+
+    <!-- PROFIT / LOSS SIMULATOR -->
+    <div id="plSection" style="margin-top:14px;background:var(--dark2);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:20px;">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:16px;">
+        <span style="font-size:16px;">🎯</span>
+        <span style="font-size:14px;font-weight:700;color:var(--text);">توقع الربح والخسارة</span>
+      </div>
+      <div>
+        <label style="font-size:12px;color:var(--text-muted);display:block;margin-bottom:7px;">📌 سعر البيع المستهدف</label>
+        <div style="display:flex;gap:8px;align-items:center;">
+          <input id="iSellPrice" type="number" inputmode="decimal" placeholder="أدخل سعر البيع..." min="0" step="0.01"
+            style="flex:1;background:var(--dark3);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:12px 16px;color:var(--text);font-family:Tajawal,sans-serif;font-size:15px;font-weight:700;outline:none;direction:ltr;"
+            oninput="calcPL()" onchange="calcPL()" />
+          <span id="iSellCurLabel" style="font-size:13px;color:var(--text-muted);white-space:nowrap;">USD</span>
+        </div>
+      </div>
+
+      <div id="plResult" style="display:none;margin-top:16px;">
+        <!-- Big PL number -->
+        <div id="plCard" style="border-radius:14px;padding:20px;text-align:center;margin-bottom:14px;">
+          <div style="font-size:12px;margin-bottom:6px;opacity:.8;">صافي الربح / الخسارة</div>
+          <div id="plAmount" style="font-size:48px;font-weight:900;line-height:1.1;">—</div>
+          <div id="plPct" style="font-size:18px;font-weight:700;margin-top:4px;">—</div>
+        </div>
+        <!-- Details grid -->
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+          <div style="background:var(--dark3);border-radius:12px;padding:14px;text-align:center;">
+            <div style="font-size:11px;color:var(--text-muted);margin-bottom:5px;">💰 تكلفة الشراء الكاملة</div>
+            <div id="plBuyCost" style="font-size:15px;font-weight:700;color:var(--text);">—</div>
+          </div>
+          <div style="background:var(--dark3);border-radius:12px;padding:14px;text-align:center;">
+            <div style="font-size:11px;color:var(--text-muted);margin-bottom:5px;">💵 عائد البيع</div>
+            <div id="plSellReturn" style="font-size:15px;font-weight:700;color:var(--text);">—</div>
+          </div>
+          <div style="background:var(--dark3);border-radius:12px;padding:14px;text-align:center;">
+            <div style="font-size:11px;color:var(--text-muted);margin-bottom:5px;">📈 نسبة التغير</div>
+            <div id="plChangePct" style="font-size:15px;font-weight:700;">—</div>
+          </div>
+          <div style="background:var(--dark3);border-radius:12px;padding:14px;text-align:center;">
+            <div style="font-size:11px;color:var(--text-muted);margin-bottom:5px;">⚖️ نقطة التعادل</div>
+            <div id="plBreakeven" style="font-size:15px;font-weight:700;color:var(--gold);">—</div>
+          </div>
+        </div>
+      </div>
+
+      <div id="plEmpty" style="text-align:center;padding:14px;color:var(--text-muted);font-size:13px;">
+        أدخل سعر البيع المستهدف لحساب الربح أو الخسارة
+      </div>
+    </div>
+    </div>
+    <div id="iCalcEmpty" style="text-align:center;padding:16px;color:var(--text-muted);font-size:13px;">
+      &#x2B06;&#xFE0F; &#x0627;&#x0628;&#x062D;&#x062B; &#x0639;&#x0646; &#x0633;&#x0647;&#x0645; &#x0623;&#x0648; &#x0639;&#x0645;&#x0644;&#x0629; &#x0623;&#x0648;&#x0644;&#x0627;&#x064B; &#x062B;&#x0645; &#x0623;&#x062F;&#x062E;&#x0644; &#x0645;&#x0628;&#x0644;&#x063A;&#x0643;
+    </div>
+  </div>
+</div>
+
+<div id="srEmpty" class="empty-state">
+  <div class="emoji">📊</div>
+  <h3>ابحث عن أي سهم أو عملة مشفرة</h3>
+  <p>اكتب الرمز أعلاه للحصول على السعر الحي، الرسم البياني، والتحليل الذكي</p>
+</div>
+```
+
+  </div>
+
   <!-- CALCULATOR SECTION -->
+
   <div id="sec-calc" class="section">
     <div class="section-title">🧮 حاسبة الشراء</div>
     <div style="max-width:680px;margin:0 auto;">
 
-      <!-- Card -->
-      <div style="background:var(--dark3);border:1px solid rgba(255,140,42,.2);border-radius:18px;padding:32px;margin-bottom:20px;">
-        <p style="font-size:14px;color:var(--text-muted);text-align:center;margin-bottom:28px;">
-          أدخل مبلغك وسعر السهم أو العملة لمعرفة كم حصة تقدر تشتري
-        </p>
+```
+  <!-- Card -->
+  <div style="background:var(--dark3);border:1px solid rgba(255,140,42,.2);border-radius:18px;padding:32px;margin-bottom:20px;">
+    <p style="font-size:14px;color:var(--text-muted);text-align:center;margin-bottom:28px;">
+      أدخل مبلغك وسعر السهم أو العملة لمعرفة كم حصة تقدر تشتري
+    </p>
 
-        <!-- Inputs -->
-        <div style="display:grid;gap:16px;margin-bottom:24px;">
+    <!-- Inputs -->
+    <div style="display:grid;gap:16px;margin-bottom:24px;">
 
-          <div>
-            <label style="font-size:12px;color:var(--text-muted);display:block;margin-bottom:8px;">💰 المبلغ المتاح للاستثمار</label>
-            <div style="display:flex;gap:8px;">
-              <input id="calcAmount" type="number" placeholder="مثال: 5000" min="0"
-                style="flex:1;background:var(--dark2);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:13px 16px;color:var(--text);font-family:'Tajawal',sans-serif;font-size:16px;font-weight:700;outline:none;direction:ltr;transition:border-color .2s;"
-                oninput="calcResult()" onfocus="this.style.borderColor='rgba(255,140,42,.5)'" onblur="this.style.borderColor='rgba(255,255,255,.1)'"/>
-              <select id="calcCurrency" onchange="calcResult()"
-                style="background:var(--dark2);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:13px 14px;color:var(--text);font-family:'Tajawal',sans-serif;font-size:14px;outline:none;cursor:pointer;">
-                <option value="SAR">ريال 🇸🇦</option>
-                <option value="USD">دولار 🇺🇸</option>
-              </select>
-            </div>
-          </div>
-
-          <div>
-            <label style="font-size:12px;color:var(--text-muted);display:block;margin-bottom:8px;">📈 سعر السهم أو العملة الواحدة</label>
-            <div style="display:flex;gap:8px;">
-              <input id="calcPrice" type="number" placeholder="مثال: 28.50" min="0" step="0.01"
-                style="flex:1;background:var(--dark2);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:13px 16px;color:var(--text);font-family:'Tajawal',sans-serif;font-size:16px;font-weight:700;outline:none;direction:ltr;transition:border-color .2s;"
-                oninput="calcResult()" onfocus="this.style.borderColor='rgba(255,140,42,.5)'" onblur="this.style.borderColor='rgba(255,255,255,.1)'"/>
-              <select id="calcPriceCurrency" onchange="calcResult()"
-                style="background:var(--dark2);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:13px 14px;color:var(--text);font-family:'Tajawal',sans-serif;font-size:14px;outline:none;cursor:pointer;">
-                <option value="SAR">ريال 🇸🇦</option>
-                <option value="USD">دولار 🇺🇸</option>
-              </select>
-            </div>
-          </div>
-
-          <div>
-            <label style="font-size:12px;color:var(--text-muted);display:block;margin-bottom:8px;">💸 العمولة (اختياري)</label>
-            <div style="display:flex;gap:8px;align-items:center;">
-              <input id="calcFee" type="number" placeholder="مثال: 0.15" min="0" max="100" step="0.01" value="0.15"
-                style="flex:1;background:var(--dark2);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:13px 16px;color:var(--text);font-family:'Tajawal',sans-serif;font-size:16px;font-weight:700;outline:none;direction:ltr;transition:border-color .2s;"
-                oninput="calcResult()" onfocus="this.style.borderColor='rgba(255,140,42,.5)'" onblur="this.style.borderColor='rgba(255,255,255,.1)'"/>
-              <span style="font-size:14px;color:var(--text-muted);white-space:nowrap;">% من المبلغ</span>
-            </div>
-          </div>
-
+      <div>
+        <label style="font-size:12px;color:var(--text-muted);display:block;margin-bottom:8px;">💰 المبلغ المتاح للاستثمار</label>
+        <div style="display:flex;gap:8px;">
+          <input id="calcAmount" type="number" placeholder="مثال: 5000" min="0"
+            style="flex:1;background:var(--dark2);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:13px 16px;color:var(--text);font-family:'Tajawal',sans-serif;font-size:16px;font-weight:700;outline:none;direction:ltr;transition:border-color .2s;"
+            oninput="calcResult()" onfocus="this.style.borderColor='rgba(255,140,42,.5)'" onblur="this.style.borderColor='rgba(255,255,255,.1)'"/>
+          <select id="calcCurrency" onchange="calcResult()"
+            style="background:var(--dark2);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:13px 14px;color:var(--text);font-family:'Tajawal',sans-serif;font-size:14px;outline:none;cursor:pointer;">
+            <option value="SAR">ريال 🇸🇦</option>
+            <option value="USD">دولار 🇺🇸</option>
+          </select>
         </div>
-
-        <!-- Quick amount chips -->
-        <div style="margin-bottom:20px;">
-          <p style="font-size:12px;color:var(--text-muted);margin-bottom:10px;">مبالغ سريعة:</p>
-          <div style="display:flex;gap:8px;flex-wrap:wrap;">
-            <button class="chip" onclick="setAmount(1000)">1,000 ر.س</button>
-            <button class="chip" onclick="setAmount(5000)">5,000 ر.س</button>
-            <button class="chip" onclick="setAmount(10000)">10,000 ر.س</button>
-            <button class="chip" onclick="setAmount(25000)">25,000 ر.س</button>
-            <button class="chip" onclick="setAmount(50000)">50,000 ر.س</button>
-            <button class="chip" onclick="setAmount(100000)">100,000 ر.س</button>
-          </div>
-        </div>
-
       </div>
 
-      <!-- RESULT CARD -->
-      <div id="calcResultCard" style="display:none;background:var(--dark3);border:1px solid rgba(0,200,150,.25);border-radius:18px;padding:28px;margin-bottom:20px;">
-        <div style="text-align:center;margin-bottom:24px;">
-          <div style="font-size:13px;color:var(--text-muted);margin-bottom:8px;">عدد الأسهم / الوحدات اللي تقدر تشتريها</div>
-          <div id="calcShares" style="font-size:52px;font-weight:900;color:var(--green);line-height:1;">0</div>
-          <div style="font-size:13px;color:var(--text-muted);margin-top:6px;">سهم / وحدة</div>
+      <div>
+        <label style="font-size:12px;color:var(--text-muted);display:block;margin-bottom:8px;">📈 سعر السهم أو العملة الواحدة</label>
+        <div style="display:flex;gap:8px;">
+          <input id="calcPrice" type="number" placeholder="مثال: 28.50" min="0" step="0.01"
+            style="flex:1;background:var(--dark2);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:13px 16px;color:var(--text);font-family:'Tajawal',sans-serif;font-size:16px;font-weight:700;outline:none;direction:ltr;transition:border-color .2s;"
+            oninput="calcResult()" onfocus="this.style.borderColor='rgba(255,140,42,.5)'" onblur="this.style.borderColor='rgba(255,255,255,.1)'"/>
+          <select id="calcPriceCurrency" onchange="calcResult()"
+            style="background:var(--dark2);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:13px 14px;color:var(--text);font-family:'Tajawal',sans-serif;font-size:14px;outline:none;cursor:pointer;">
+            <option value="SAR">ريال 🇸🇦</option>
+            <option value="USD">دولار 🇺🇸</option>
+          </select>
         </div>
-
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
-          <div style="background:var(--dark2);border-radius:12px;padding:16px;text-align:center;">
-            <div style="font-size:11px;color:var(--text-muted);margin-bottom:6px;">💰 المبلغ المستثمر</div>
-            <div id="calcInvested" style="font-size:18px;font-weight:700;color:var(--text);">—</div>
-          </div>
-          <div style="background:var(--dark2);border-radius:12px;padding:16px;text-align:center;">
-            <div style="font-size:11px;color:var(--text-muted);margin-bottom:6px;">💸 العمولة المدفوعة</div>
-            <div id="calcFeeAmt" style="font-size:18px;font-weight:700;color:var(--red);">—</div>
-          </div>
-          <div style="background:var(--dark2);border-radius:12px;padding:16px;text-align:center;">
-            <div style="font-size:11px;color:var(--text-muted);margin-bottom:6px;">💵 المبلغ المتبقي</div>
-            <div id="calcRemain" style="font-size:18px;font-weight:700;color:var(--gold);">—</div>
-          </div>
-          <div style="background:var(--dark2);border-radius:12px;padding:16px;text-align:center;">
-            <div style="font-size:11px;color:var(--text-muted);margin-bottom:6px;">📊 متوسط سعر الحصة</div>
-            <div id="calcAvg" style="font-size:18px;font-weight:700;color:var(--text);">—</div>
-          </div>
-        </div>
-
-        <!-- Break even -->
-        <div style="margin-top:16px;background:rgba(255,140,42,.07);border:1px solid rgba(255,140,42,.15);border-radius:12px;padding:16px;">
-          <div style="font-size:12px;color:var(--text-muted);margin-bottom:8px;">📈 لتحقيق ربح عند بيعك</div>
-          <div style="display:flex;gap:16px;flex-wrap:wrap;">
-            <div><span style="font-size:12px;color:var(--text-muted);">ربح 10%:</span> <span id="calcTarget10" style="font-size:14px;font-weight:700;color:var(--green);">—</span></div>
-            <div><span style="font-size:12px;color:var(--text-muted);">ربح 20%:</span> <span id="calcTarget20" style="font-size:14px;font-weight:700;color:var(--green);">—</span></div>
-            <div><span style="font-size:12px;color:var(--text-muted);">ربح 50%:</span> <span id="calcTarget50" style="font-size:14px;font-weight:700;color:var(--green);">—</span></div>
-          </div>
-        </div>
-
       </div>
 
-      <!-- EMPTY STATE -->
-      <div id="calcEmpty" style="text-align:center;padding:40px 24px;color:var(--text-muted);">
-        <div style="font-size:48px;margin-bottom:16px;">🧮</div>
-        <div style="font-size:15px;font-weight:600;color:var(--text);margin-bottom:8px;">أدخل المبلغ وسعر السهم</div>
-        <div style="font-size:13px;">النتيجة تظهر فوراً</div>
-      </div>
-
-      <div style="background:rgba(255,71,87,.06);border:1px solid rgba(255,71,87,.1);border-radius:10px;padding:12px 16px;font-size:12px;color:var(--text-muted);line-height:1.7;">
-        ⚠️ <strong style="color:var(--red);">تنبيه:</strong> الحاسبة للمساعدة فقط. الأسعار والعمولات الفعلية تختلف حسب المنصة والسوق.
+      <div>
+        <label style="font-size:12px;color:var(--text-muted);display:block;margin-bottom:8px;">💸 العمولة (اختياري)</label>
+        <div style="display:flex;gap:8px;align-items:center;">
+          <input id="calcFee" type="number" placeholder="مثال: 0.15" min="0" max="100" step="0.01" value="0.15"
+            style="flex:1;background:var(--dark2);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:13px 16px;color:var(--text);font-family:'Tajawal',sans-serif;font-size:16px;font-weight:700;outline:none;direction:ltr;transition:border-color .2s;"
+            oninput="calcResult()" onfocus="this.style.borderColor='rgba(255,140,42,.5)'" onblur="this.style.borderColor='rgba(255,255,255,.1)'"/>
+          <span style="font-size:14px;color:var(--text-muted);white-space:nowrap;">% من المبلغ</span>
+        </div>
       </div>
 
     </div>
+
+    <!-- Quick amount chips -->
+    <div style="margin-bottom:20px;">
+      <p style="font-size:12px;color:var(--text-muted);margin-bottom:10px;">مبالغ سريعة:</p>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;">
+        <button class="chip" onclick="setAmount(1000)">1,000 ر.س</button>
+        <button class="chip" onclick="setAmount(5000)">5,000 ر.س</button>
+        <button class="chip" onclick="setAmount(10000)">10,000 ر.س</button>
+        <button class="chip" onclick="setAmount(25000)">25,000 ر.س</button>
+        <button class="chip" onclick="setAmount(50000)">50,000 ر.س</button>
+        <button class="chip" onclick="setAmount(100000)">100,000 ر.س</button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- RESULT CARD -->
+  <div id="calcResultCard" style="display:none;background:var(--dark3);border:1px solid rgba(0,200,150,.25);border-radius:18px;padding:28px;margin-bottom:20px;">
+    <div style="text-align:center;margin-bottom:24px;">
+      <div style="font-size:13px;color:var(--text-muted);margin-bottom:8px;">عدد الأسهم / الوحدات اللي تقدر تشتريها</div>
+      <div id="calcShares" style="font-size:52px;font-weight:900;color:var(--green);line-height:1;">0</div>
+      <div style="font-size:13px;color:var(--text-muted);margin-top:6px;">سهم / وحدة</div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+      <div style="background:var(--dark2);border-radius:12px;padding:16px;text-align:center;">
+        <div style="font-size:11px;color:var(--text-muted);margin-bottom:6px;">💰 المبلغ المستثمر</div>
+        <div id="calcInvested" style="font-size:18px;font-weight:700;color:var(--text);">—</div>
+      </div>
+      <div style="background:var(--dark2);border-radius:12px;padding:16px;text-align:center;">
+        <div style="font-size:11px;color:var(--text-muted);margin-bottom:6px;">💸 العمولة المدفوعة</div>
+        <div id="calcFeeAmt" style="font-size:18px;font-weight:700;color:var(--red);">—</div>
+      </div>
+      <div style="background:var(--dark2);border-radius:12px;padding:16px;text-align:center;">
+        <div style="font-size:11px;color:var(--text-muted);margin-bottom:6px;">💵 المبلغ المتبقي</div>
+        <div id="calcRemain" style="font-size:18px;font-weight:700;color:var(--gold);">—</div>
+      </div>
+      <div style="background:var(--dark2);border-radius:12px;padding:16px;text-align:center;">
+        <div style="font-size:11px;color:var(--text-muted);margin-bottom:6px;">📊 متوسط سعر الحصة</div>
+        <div id="calcAvg" style="font-size:18px;font-weight:700;color:var(--text);">—</div>
+      </div>
+    </div>
+
+    <!-- Break even -->
+    <div style="margin-top:16px;background:rgba(255,140,42,.07);border:1px solid rgba(255,140,42,.15);border-radius:12px;padding:16px;">
+      <div style="font-size:12px;color:var(--text-muted);margin-bottom:8px;">📈 لتحقيق ربح عند بيعك</div>
+      <div style="display:flex;gap:16px;flex-wrap:wrap;">
+        <div><span style="font-size:12px;color:var(--text-muted);">ربح 10%:</span> <span id="calcTarget10" style="font-size:14px;font-weight:700;color:var(--green);">—</span></div>
+        <div><span style="font-size:12px;color:var(--text-muted);">ربح 20%:</span> <span id="calcTarget20" style="font-size:14px;font-weight:700;color:var(--green);">—</span></div>
+        <div><span style="font-size:12px;color:var(--text-muted);">ربح 50%:</span> <span id="calcTarget50" style="font-size:14px;font-weight:700;color:var(--green);">—</span></div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- EMPTY STATE -->
+  <div id="calcEmpty" style="text-align:center;padding:40px 24px;color:var(--text-muted);">
+    <div style="font-size:48px;margin-bottom:16px;">🧮</div>
+    <div style="font-size:15px;font-weight:600;color:var(--text);margin-bottom:8px;">أدخل المبلغ وسعر السهم</div>
+    <div style="font-size:13px;">النتيجة تظهر فوراً</div>
+  </div>
+
+  <div style="background:rgba(255,71,87,.06);border:1px solid rgba(255,71,87,.1);border-radius:10px;padding:12px 16px;font-size:12px;color:var(--text-muted);line-height:1.7;">
+    ⚠️ <strong style="color:var(--red);">تنبيه:</strong> الحاسبة للمساعدة فقط. الأسعار والعمولات الفعلية تختلف حسب المنصة والسوق.
+  </div>
+
+</div>
+```
+
   </div>
 
 </div>
@@ -678,8 +703,8 @@ footer{background:var(--dark2);border-top:1px solid rgba(255,255,255,.05);paddin
   <p style="margin-top:6px;">fintas.com © 2025</p>
 </footer>
 
-
 <script src="https://s3.tradingview.com/tv.js"></script>
+
 <script>
 // ====== CHANNELS DATA ======
 var CH = {
@@ -952,13 +977,25 @@ function iSetAmount(val){
 }
 
 function iCalc(){
-  var amount   = parseFloat(document.getElementById('iCalcAmount').value) || 0;
-  var feeRate  = parseFloat(document.getElementById('iCalcFee').value) || 0;
-  var amtCur   = document.getElementById('iCalcCur').value;
-  var manInput = document.getElementById('iManualPrice');
-  var manPrice = manInput ? parseFloat(manInput.value) || 0 : 0;
-  var price    = iCurrentPrice > 0 ? iCurrentPrice : manPrice;
-  var priceCur = iCurrentPriceCur;
+  var amount  = parseFloat(document.getElementById('iCalcAmount').value) || 0;
+  var feeRate = parseFloat(document.getElementById('iCalcFee').value) || 0;
+  var amtCur  = document.getElementById('iCalcCur').value;
+
+  // Price: from search or manual input
+  var manInput     = document.getElementById('iManualPrice');
+  var manPrice     = manInput ? parseFloat(manInput.value) || 0 : 0;
+  var price        = iCurrentPrice > 0 ? iCurrentPrice : manPrice;
+  var manCurEl     = document.getElementById('iManualPriceCur');
+  var priceCur     = iCurrentPrice > 0 ? iCurrentPriceCur : (manCurEl ? manCurEl.value : 'USD');
+
+  // Asset type
+  var assetTypeEl  = document.getElementById('iAssetType');
+  var assetType    = assetTypeEl ? assetTypeEl.value : 'auto';
+  var cryptoList   = ['BTC','ETH','SOL','BNB','XRP','ADA','DOGE','AVAX','MATIC','DOT','LINK','LTC'];
+  var isCrypto     = iCurrentSym ? cryptoList.indexOf(iCurrentSym) !== -1 : false;
+  if(assetType === 'crypto') isCrypto = true;
+  else if(assetType === 'stock') isCrypto = false;
+  else if(!isCrypto && !iCurrentSym && price > 1000) isCrypto = true;
 
   if(!amount || !price){
     document.getElementById('iCalcResult').style.display = 'none';
@@ -967,32 +1004,70 @@ function iCalc(){
     return;
   }
 
+  // Convert everything to USD for calculation
   var USD_SAR  = 3.75;
-  var amtUSD   = amtCur==='SAR' ? amount/USD_SAR : amount;
-  var priceUSD = priceCur==='SAR' ? price/USD_SAR : price;
-  var feeAmt   = amtUSD*(feeRate/100);
+  var amtUSD   = amtCur   === 'SAR' ? amount / USD_SAR : amount;
+  var priceUSD = priceCur === 'SAR' ? price  / USD_SAR : price;
+  var feeAmt   = amtUSD * (feeRate / 100);
   var netAmt   = amtUSD - feeAmt;
-  var shares   = Math.floor(netAmt/priceUSD);
-  var invested = shares*priceUSD;
-  var remain   = netAmt - invested;
-  var avg      = shares>0 ? invested/shares : 0;
+  var rawShares = netAmt / priceUSD;
+  var shares   = isCrypto ? rawShares : Math.floor(rawShares);
+  var invested = shares * priceUSD;
+  var remain   = isCrypto ? 0 : netAmt - invested;
+  var avg      = shares > 0 ? invested / shares : 0;
 
-  function fmt(v,cur){
-    if(!v && v!==0) return '—';
-    if(cur==='SAR') return (v*USD_SAR).toLocaleString('ar-SA',{maximumFractionDigits:2})+' ر.س';
-    return '$'+v.toLocaleString('en',{maximumFractionDigits:3});
+  function fmt(v, cur) {
+    if(!v && v !== 0) return '—';
+    if(cur === 'SAR') return (v * USD_SAR).toLocaleString('ar-SA',{maximumFractionDigits:2}) + ' ر.س';
+    return '$' + v.toLocaleString('en',{maximumFractionDigits:3});
   }
 
-  document.getElementById('iCalcShares').textContent      = shares.toLocaleString('ar-SA');
-  document.getElementById('iCalcSharesLabel').textContent = iCurrentSym ? iCurrentSym+' سهم / وحدة' : 'سهم / وحدة';
-  document.getElementById('iCalcInvested').textContent    = fmt(invested, amtCur);
-  document.getElementById('iCalcFeeAmt').textContent      = fmt(feeAmt, amtCur);
-  document.getElementById('iCalcRemain').textContent      = fmt(remain, amtCur);
-  document.getElementById('iCalcAvg').textContent         = fmt(avg, priceCur);
-  document.getElementById('iT10').textContent             = fmt(avg*1.10, priceCur);
-  document.getElementById('iT20').textContent             = fmt(avg*1.20, priceCur);
-  document.getElementById('iT50').textContent             = fmt(avg*1.50, priceCur);
-  document.getElementById('iT100').textContent            = fmt(avg*2.00, priceCur);
+  function fmtShares(s, sym) {
+    if(sym === 'BTC') return s.toFixed(8);
+    if(['ETH','SOL','BNB','XRP','ADA'].indexOf(sym) !== -1) return s.toFixed(4);
+    if(isCrypto && s < 1) return s.toFixed(8);
+    if(isCrypto) return s.toFixed(4);
+    return Math.floor(s).toLocaleString('ar-SA');
+  }
+
+  // Display shares
+  var sharesDisplay = document.getElementById('iCalcShares');
+  var sharesLabel   = document.getElementById('iCalcSharesLabel');
+  if(!isCrypto && shares < 1 && rawShares > 0) {
+    sharesDisplay.textContent = '0';
+    sharesDisplay.style.color = 'var(--red)';
+    sharesLabel.innerHTML = '<span style="font-size:13px;color:var(--red);">⚠️ المبلغ غير كافٍ لشراء سهم واحد</span><br><span style="font-size:12px;color:var(--text-muted);">تحتاج على الأقل: $' + priceUSD.toLocaleString('en',{maximumFractionDigits:2}) + ' (~' + (priceUSD*USD_SAR).toLocaleString('ar-SA',{maximumFractionDigits:0}) + ' ر.س)</span>';
+  } else {
+    sharesDisplay.textContent = fmtShares(shares, iCurrentSym);
+    sharesDisplay.style.color = 'var(--green)';
+    sharesLabel.textContent   = iCurrentSym ? iCurrentSym + ' سهم / وحدة' : 'سهم / وحدة';
+  }
+
+  // Show sub-units for crypto
+  var valEl = document.getElementById('iCalcSharesValue');
+  if(valEl) {
+    if(isCrypto && shares > 0) {
+      var usdVal = shares * priceUSD;
+      var html   = '≈ $' + usdVal.toLocaleString('en',{maximumFractionDigits:2}) + ' دولار';
+      if(iCurrentSym === 'BTC' || isCrypto) {
+        var satoshis = Math.round(shares * 100000000);
+        html += '<br><span style="font-size:12px;color:var(--text-muted);">' + satoshis.toLocaleString('ar-SA') + ' ساتوشي</span>';
+      }
+      valEl.innerHTML = html;
+      valEl.style.display = 'block';
+    } else {
+      valEl.style.display = 'none';
+    }
+  }
+
+  document.getElementById('iCalcInvested').textContent = fmt(invested, amtCur);
+  document.getElementById('iCalcFeeAmt').textContent   = fmt(feeAmt,   amtCur);
+  document.getElementById('iCalcRemain').textContent   = fmt(remain,   amtCur);
+  document.getElementById('iCalcAvg').textContent      = fmt(avg,      priceCur);
+  document.getElementById('iT10').textContent          = fmt(avg * 1.10, priceCur);
+  document.getElementById('iT20').textContent          = fmt(avg * 1.20, priceCur);
+  document.getElementById('iT50').textContent          = fmt(avg * 1.50, priceCur);
+  document.getElementById('iT100').textContent         = fmt(avg * 2.00, priceCur);
 
   document.getElementById('iCalcResult').style.display = 'block';
   document.getElementById('iCalcEmpty').style.display  = 'none';
@@ -1019,7 +1094,7 @@ function updateCalcPrice(price, cur, sym){
 function calcPL(){
   var sellPrice = parseFloat(document.getElementById('iSellPrice').value) || 0;
   var sharesEl  = document.getElementById('iCalcShares');
-  var shares    = sharesEl ? parseInt(sharesEl.textContent.replace(/[^0-9]/g,'')) || 0 : 0;
+  var shares    = sharesEl ? parseFloat(sharesEl.textContent.replace(/[^0-9.]/g,'')) || 0 : 0;
   var avg       = iCurrentPrice;
   var cur       = iCurrentPriceCur;
 
@@ -1061,5 +1136,6 @@ function calcPL(){
   document.getElementById('plEmpty').style.display  = 'none';
 }
 </script>
+
 </body>
 </html>
