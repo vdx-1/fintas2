@@ -877,7 +877,7 @@ async function getAnalysis(sym,type){
   try{
     var typeAr={crypto:'عملة مشفرة',saudi:'سهم سعودي',stock:'سهم أمريكي',commodity:'سلعة',forex:'فوركس'};
     var prompt='أنت محلل مالي محترف. قدم تحليلاً مختصراً باللغة العربية للرمز: '+sym+' ('+( typeAr[type]||'أصل مالي')+')\n\nاكتب فقرات قصيرة:\n**نبذة:** جملتان عن هذا الأصل.\n**الأداء الأخير:** كيف يؤدي.\n**العوامل المؤثرة:** أهم عاملين.\n**التوقعات:** نظرة مستقبلية مختصرة.\n**التوصية:** شراء أو انتظار أو بيع مع سبب.\n**مستوى المخاطرة:** مرتفع أو متوسط أو منخفض.\n\nلا تتجاوز 180 كلمة.';
-    var res=await fetch('https://api.anthropic.com/v1/messages',{
+    var res=await fetch('https://fintasai.tassansaleh.workers.dev',{
       method:'POST',
       headers:{'Content-Type':'application/json'},
       body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:1000,messages:[{role:'user',content:prompt}]})
@@ -932,7 +932,7 @@ async function getAISuggestion(sym, type) {
   try {
     var typeAr = {crypto:"عملة مشفرة",saudi:"سهم سعودي",stock:"سهم أمريكي",commodity:"سلعة",forex:"فوركس"};
     var prompt = "بناء على السهم: " + sym + " (" + (typeAr[type]||"أصل") + "), اقترح بجملة واحدة نصيحة مفيدة للمستثمر المبتدئ. ثم اقترح 2-3 أسهم مشابهة للمقارنة. أجب بهذا الشكل فقط:\nنصيحة: [جملة واحدة]\nمقارنة: SYMBOL1, SYMBOL2, SYMBOL3";
-    var res = await fetch("https://api.anthropic.com/v1/messages", {
+    var res = await fetch("https://fintasai.tassansaleh.workers.dev", {
       method: "POST",
       headers: {"Content-Type": "application/json"},
       body: JSON.stringify({model:"claude-sonnet-4-20250514", max_tokens:200, messages:[{role:"user",content:prompt}]})
