@@ -880,7 +880,7 @@ async function getAnalysis(sym,type){
     var res=await fetch('https://fintasai.tassansaleh.workers.dev',{
       method:'POST',
       headers:{'Content-Type':'application/json'},
-      body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:1000,messages:[{role:'user',content:prompt}]})
+      body:JSON.stringify({model:'claude-sonnet-4-5',max_tokens:1000,messages:[{role:'user',content:prompt}]})
     });
     var data=await res.json();
     var text=data.content&&data.content[0]?data.content[0].text:'';
@@ -935,7 +935,7 @@ async function getAISuggestion(sym, type) {
     var res = await fetch("https://fintasai.tassansaleh.workers.dev", {
       method: "POST",
       headers: {"Content-Type": "application/json"},
-      body: JSON.stringify({model:"claude-sonnet-4-20250514", max_tokens:200, messages:[{role:"user",content:prompt}]})
+      body: JSON.stringify({model:"claude-sonnet-4-5", max_tokens:200, messages:[{role:"user",content:prompt}]})
     });
     var data = await res.json();
     var text = data.content && data.content[0] ? data.content[0].text : "";
