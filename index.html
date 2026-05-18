@@ -901,7 +901,7 @@ async function getAnalysis(sym,type){
     else if(risk==='low'){re.className='b-rl';re.textContent='✅ مخاطرة منخفضة';}
     else{re.className='b-rm';re.textContent='🟡 مخاطرة متوسطة';}
   }catch(e){
-    document.getElementById('aText').innerHTML='<span style="color:var(--text-muted);">التحليل الذكي يحتاج ربط API Key — يشتغل بعد النشر.</span>';
+    document.getElementById('aText').innerHTML='<span style="color:var(--red);">خطأ: ' + e.message + '</span>';
   }
 }
 
