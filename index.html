@@ -714,7 +714,6 @@ var CH = {
     {name:"سكاي نيوز عربية",desc:"بث مباشر HD",icon:"🌐",url:"https://www.youtube.com/@skynewsarabia/streams",color:"cat-news"},
     {name:"العربي أخبار",desc:"بث حي مستمر",icon:"📺",url:"https://www.youtube.com/@AlArabyTV/streams",color:"cat-news"},
     {name:"قناة الحدث",desc:"أحدث الأخبار",icon:"⚡",url:"https://www.youtube.com/@AlHadath/streams",color:"cat-news"},
-    {name:"روسيا اليوم",desc:"RT Arabic — بث مباشر",icon:"🌍",url:"https://www.youtube.com/@RTarabic/live",color:"cat-news"},
   ],
   trading:[
     {name:"CNBC عربية",desc:"القناة الاقتصادية الأولى عربياً",icon:"📊",url:"https://www.youtube.com/user/cnbcarabiaTV/streams",color:"cat-trading"},
@@ -739,13 +738,11 @@ var CH = {
 };
 
 var NEWS_SITES = [
-  {name:"Investing.com عربي",type:"أسهم وفوركس وعملات",icon:"📈",desc:"المرجع الأول للأسواق المالية — أسعار حية، تحليلات، تقويم اقتصادي",tags:["أسهم","فوركس","سلع"],url:"https://ar.investing.com/news/",cat:"ns-cat-stocks"},
   {name:"TradingView",type:"رسوم بيانية وتحليل",icon:"📊",desc:"منصة الرسوم البيانية الأكثر استخداماً عالمياً",tags:["رسوم بيانية","تحليل فني"],url:"https://ar.tradingview.com",cat:"ns-cat-stocks"},
   {name:"موقع تداول السعودية",type:"البورصة السعودية الرسمية",icon:"🇸🇦",desc:"الموقع الرسمي لسوق الأسهم السعودية — أسعار حية وإفصاحات",tags:["أسهم سعودية","رسمي"],url:"https://www.saudiexchange.sa/wps/portal/tadawul/home",cat:"ns-cat-trading"},
   {name:"Binance Academy",type:"تعليم العملات المشفرة",icon:"₿",desc:"المصدر التعليمي الرسمي من Binance — مقالات وشروحات بالعربي",tags:["بيتكوين","تعليم"],url:"https://academy.binance.com/ar",cat:"ns-cat-crypto"},
   {name:"CoinMarketCap",type:"أسعار العملات المشفرة",icon:"🪙",desc:"المرجع الأول لأسعار وترتيب العملات المشفرة عالمياً",tags:["عملات مشفرة","أسعار"],url:"https://coinmarketcap.com",cat:"ns-cat-crypto"},
   {name:"مباشر للأعمال",type:"أسواق عربية",icon:"💹",desc:"تغطية شاملة لأسواق المال العربية في 12 دولة",tags:["بورصات عربية","أخبار"],url:"https://www.mubasher.info",cat:"ns-cat-trading"},
-  {name:"Bloomberg عربي",type:"اقتصاد دولي",icon:"🌐",desc:"أخبار الأسواق العالمية والاقتصاد الكلي بالعربية",tags:["دولي","اقتصاد"],url:"https://www.bloomberg.com/arabic",cat:"ns-cat-general"},
   {name:"أرقام",type:"أسواق خليجية",icon:"📰",desc:"بوابة أرقام المالية — تغطية متخصصة لأسواق الخليج",tags:["خليج","سعودية"],url:"https://www.argaam.com",cat:"ns-cat-trading"},
 ];
 
@@ -900,6 +897,7 @@ async function getAnalysis(sym,type){
     if(risk==='high'){re.className='b-rh';re.textContent='⚠️ مخاطرة مرتفعة';}
     else if(risk==='low'){re.className='b-rl';re.textContent='✅ مخاطرة منخفضة';}
     else{re.className='b-rm';re.textContent='🟡 مخاطرة متوسطة';}
+
   }catch(e){
     document.getElementById('aText').innerHTML='<span style="color:var(--text-muted);">التحليل الذكي يحتاج ربط API Key — يشتغل بعد النشر.</span>';
   }
